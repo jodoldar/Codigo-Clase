@@ -1,0 +1,17 @@
+3.3 Cuestiones
+a) Enumere y describa los tipos de ficheros que se han generado en cada una de las fases de la compilación
+
+- Usando el comando gcc -o circulo2 circulo2.c area.c se ha obtenido un archivo de nombre "circulo2" el cual ya es ejecutable.
+
+b) En la última compilación los 2 ficheros fuente (circulo2.c y area.c) son pasados como argumento al compilador gcc. Compruebe que ocurre si no pusiéramos area.c como argumento.
+
+- Al no pasar "area.c" como parametro se obtiene un error de compilación, especificamente uno de enlazado, como se puede ver en el terminal "clang: error: linker command failed with exit code 1"
+
+c) ¿Qué diferencias y similitudes existen entre la compilación de un programa en C y la de Java?.
+
+- Que una compilación de Java se hace para una maquina virtual capaz de hacer que un mismo archivo se ejecute en cualquier ordenador, sin embargo, para un archivo de tipo C es necesario compilarlo en cada ordenador para el que vaya a ser usado, además que el compilado en Java no ofrece las opciones que ofrece el de C, como los archivos objeto o ensamblador.
+
+4.2 Cuestiones
+¿Qué modificaciones tendríamos que hacer en el programa anterior si declaraásemos la variable global a como local en main()?.
+
+-Seria necesario que en la función inc_a, se le pasase el valor de "a" como parametro.

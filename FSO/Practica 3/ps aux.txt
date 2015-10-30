@@ -1,0 +1,249 @@
+MacBook-Pro-de-Josep:fso_pract3 Josep$ ps aux
+USER              PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+_windowserver     206  32,4  1,6  4667504 135784   ??  Rs   15sep15 150:12.90 /System/Library/Frameworks/ApplicationServices.fram
+Josep             240   4,7  0,9  2730116  76008   ??  U    15sep15  18:42.62 /System/Library/CoreServices/Dock.app/Contents/MacO
+Josep             266   2,8  0,7  2576184  62312   ??  U    15sep15   8:49.52 /System/Library/PrivateFrameworks/CalendarAgent.fra
+_coreaudiod       247   1,2  0,1  2502768   4304   ??  Ss   15sep15   6:09.27 /usr/sbin/coreaudiod
+Josep           16972   1,2  0,1  2494888   8032   ??  S     3:23PM   0:00.40 /System/Library/PrivateFrameworks/AOSKit.framework/
+Josep             330   1,0  1,9  2982984 156584   ??  S    15sep15 281:40.71 /Applications/Google Drive.app/Contents/MacOS/Googl
+Josep           16549   0,8  3,0  4007572 250292   ??  S    10:28PM   0:46.09 /Applications/iTunes.app/Contents/MacOS/iTunes
+Josep           15520   0,7  0,5  2599864  37864   ??  U    sáb01PM   0:05.85 /Applications/Utilities/Terminal.app/Contents/MacOS
+Josep             312   0,2  0,3  2774260  27700   ??  S    15sep15  10:42.96 /System/Library/CoreServices/NotificationCenter.app
+root               72   0,2  0,1  2514308   8000   ??  Rs   15sep15   0:49.29 /usr/libexec/opendirectoryd
+root               39   0,2  0,0  2474004   1464   ??  Ss   15sep15   1:32.24 /usr/sbin/syslogd
+_networkd         168   0,1  0,1  3702300   9456   ??  Ss   15sep15   1:40.91 /usr/libexec/networkd
+root                1   0,1  0,2  2495680  14044   ??  Ss   15sep15   8:15.03 /sbin/launchd
+Josep             234   0,1  0,1  2499348   4224   ??  S    15sep15   0:17.60 /usr/libexec/UserEventAgent (Aqua)
+_netbios        16983   0,0  0,1  2470036   5960   ??  SNs   3:46PM   0:00.04 /usr/sbin/netbiosd
+Josep           16894   0,0  0,3  2512992  27596   ??  S    12:04AM   0:00.81 /System/Library/Frameworks/CoreServices.framework/F
+Josep           16854   0,0  0,4  2520084  32088   ??  S    11:36PM   0:00.99 /System/Library/Frameworks/CoreServices.framework/F
+Josep           16853   0,0  0,3  2510800  24512   ??  S    11:30PM   0:00.87 /System/Library/Frameworks/CoreServices.framework/F
+Josep           16852   0,0  0,3  2513792  27636   ??  S    11:30PM   0:00.76 /System/Library/Frameworks/CoreServices.framework/F
+Josep           16436   0,0  3,0  4108552 247624   ??  S     8:41PM   1:28.65 /Applications/Skype.app/Contents/MacOS/Skype
+Josep           15456   0,0  0,1  2558104   8976   ??  S    sáb12PM   0:00.43 /System/Library/CoreServices/CoreServicesUIAgent.ap
+Josep           14380   0,0  1,9  4039344 157196   ??  S    vie02PM   3:12.53 /Applications/Telegram.app/Contents/MacOS/Telegram 
+root            14336   0,0  0,0  2521956    776   ??  Ss   vie01PM   0:08.66 /usr/sbin/systemstats --xpc
+Josep           14169   0,0  0,0  3545804   1840   ??  Ss   vie12PM   0:05.86 /System/Library/Frameworks/WebKit.framework/Version
+Josep           13715   0,0  0,1  2494684   5640   ??  Ss   vie09AM   0:06.30 /System/Library/PrivateFrameworks/Safari.framework/
+Josep           13683   0,0  0,0  2468972   1220   ??  S    vie09AM   0:00.37 /usr/libexec/webinspectord
+Josep           13682   0,0  0,4  4835800  32892   ??  Ss   vie09AM   5:29.40 /System/Library/Frameworks/WebKit.framework/Version
+Josep           13679   0,0  3,2  4182444 267156   ??  S    vie09AM   8:50.13 /Applications/Safari.app/Contents/MacOS/Safari
+Josep           13146   0,0  0,2  3646760  16580   ??  S    jue12PM   0:20.21 /System/Library/CoreServices/Dock.app/Contents/Reso
+Josep           13143   0,0  0,0  2496676   2988   ??  S    jue12PM   0:00.18 /System/Library/PrivateFrameworks/Notes.framework/V
+Josep           13109   0,0  0,0  2468896    160   ??  Ss   jue11AM   0:00.01 /System/Library/Frameworks/ApplicationServices.fram
+Josep           12976   0,0  0,0   610928    172   ??  S    jue09AM   0:00.02 /Applications/Steam.app/Contents/MacOS/ipcserver
+Josep           12045   0,0  0,5  4087164  44276   ??  Ss   mié10AM   0:19.44 /System/Library/Frameworks/WebKit.framework/Version
+Josep           11996   0,0  0,5  4113868  44796   ??  Ss   mié09AM   0:16.91 /System/Library/Frameworks/WebKit.framework/Version
+Josep           11989   0,0  1,9  4526520 163060   ??  S    mié09AM   4:19.43 /Applications/Mail.app/Contents/MacOS/Mail
+Josep           11973   0,0  0,0  2844608   1016   ??  Ss   mié09AM   0:11.52 /System/Library/Frameworks/VideoToolbox.framework/V
+Josep           11972   0,0  0,0  2493764    856   ??  Ss   mié09AM   0:00.07 /System/Library/Frameworks/AudioToolbox.framework/X
+Josep           11971   0,0  0,0  2469456    636   ??  Ss   mié09AM   0:00.03 /System/Library/Frameworks/AudioToolbox.framework/X
+Josep           10995   0,0  0,0  2468880    160   ??  S    mar06PM   0:00.02 /usr/libexec/ApplicationFirewall/Firewall
+Josep           10609   0,0  0,0  2469000   1156   ??  S    mar06PM   0:00.69 /System/Library/PrivateFrameworks/CommunicationsFil
+root            10052   0,0  0,0  2469972    712   ??  Ss   mar12AM   0:00.07 /System/Library/Frameworks/GSS.framework/Helpers/co
+Josep            6105   0,0  0,0  2497488   2496   ??  Ss   20sep15   0:03.48 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep            5997   0,0  0,0  2493536    984   ??  Ss   19sep15   0:00.06 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep            5973   0,0  0,0  2503612   1896   ??  S    19sep15   0:00.74 /System/Library/Frameworks/ApplicationServices.fram
+root             4954   0,0  0,0  2459012    160   ??  Ss   19sep15   0:00.00 /usr/sbin/aslmanager -s /var/log/eventmonitor
+Josep            4635   0,0  0,0  2499536   1144   ??  S    18sep15   0:00.62 com.apple.CoreSimulator.CoreSimulatorService
+_www             3951   0,0  0,0  2482524   1228   ??  S    18sep15   0:00.24 /usr/sbin/httpd -D FOREGROUND
+root             3799   0,0  0,0   610912    160   ??  S    18sep15   0:00.00 /System/Library/Filesystems/fusefs_txantfs.fs/Suppo
+root             2932   0,0  0,0  2493000   1428   ??  Ss   17sep15   0:00.10 /System/Library/PrivateFrameworks/Noticeboard.frame
+_usbmuxd         2463   0,0  0,0  2471732   1120   ??  Ss   17sep15   0:07.58 /System/Library/PrivateFrameworks/MobileDevice.fram
+Josep            2430   0,0  0,0  2502076   1820   ??  S    17sep15   0:00.47 /Applications/iTunes.app/Contents/MacOS/iTunesHelpe
+_spotlight       2254   0,0  0,0  2470788    716   ??  S    17sep15   0:01.48 /usr/sbin/distnoted agent
+_assetcache      2251   0,0  0,0  2469472    656   ??  S    17sep15   0:00.11 /System/Library/PrivateFrameworks/TCC.framework/Res
+_assetcache      2250   0,0  0,0  2503088   2236   ??  Ss   17sep15   0:15.19 /System/Library/CoreServices/AssetCacheLocatorServi
+root             2248   0,0  0,0  2598536   1280   ??  Ss   17sep15   0:23.87 /System/Library/PrivateFrameworks/PackageKit.framew
+Josep            2134   0,0  0,0  2469412    664   ??  S    16sep15   0:00.11 /System/Library/PrivateFrameworks/StoreXPCServices.
+Josep            2133   0,0  0,0  2470292    884   ??  Ss   16sep15   0:00.17 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep            2130   0,0  0,1  3615932   5472   ??  S    16sep15   0:02.51 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep            1889   0,0  0,0  2469876   1240   ??  S    16sep15   0:06.13 /usr/bin/ssh-agent -l
+Josep            1710   0,0  0,1  2517348   4316   ??  S    16sep15   0:01.79 /System/Library/CoreServices/rcd.app/Contents/MacOS
+Josep            1427   0,0  0,0  2532068   3268   ??  S    16sep15   0:01.04 /System/Library/PrivateFrameworks/MailService.frame
+Josep            1344   0,0  0,0  2472064   1188   ??  S    15sep15   0:00.20 /System/Library/Frameworks/CoreServices.framework/F
+_spotlight       1343   0,0  0,0  2481328   1024   ??  S    15sep15   0:18.38 /System/Library/Frameworks/CoreServices.framework/F
+Josep            1270   0,0  0,1  2542196   6476   ??  S    15sep15   0:07.44 /System/Library/PrivateFrameworks/Noticeboard.frame
+root             1269   0,0  0,0  2469216    536   ??  SNs  15sep15   0:00.03 /usr/libexec/periodic-wrapper daily
+_www             1211   0,0  0,0  2478300    752   ??  S    15sep15   0:00.02 /usr/sbin/httpd -D FOREGROUND
+Josep            1179   0,0  0,0  2497488   2568   ??  Ss   15sep15   0:05.96 /System/Library/PrivateFrameworks/CommerceKit.frame
+root             1122   0,0  0,0  2469216    164   ??  SNs  15sep15   0:00.01 /usr/libexec/periodic-wrapper weekly
+Josep            1089   0,0  0,1  2500856   4572   ??  S    15sep15   0:03.25 /System/Library/PrivateFrameworks/DataDetectorsCore
+Josep            1088   0,0  0,2  2501260  14640   ??  S    15sep15   1:04.02 /System/Library/PrivateFrameworks/CoreRecents.frame
+Josep            1080   0,0  0,0  2469424    792   ??  S    15sep15   0:00.15 /usr/libexec/USBAgent
+Josep            1079   0,0  0,0  2469484    744   ??  S    15sep15   0:00.16 /System/Library/PrivateFrameworks/KerberosHelper/He
+Josep             891   0,0  0,0  2493356    824   ??  S    15sep15   0:00.24 /System/Library/Frameworks/ApplicationServices.fram
+Josep             862   0,0  0,0  2493968   1168   ??  S    15sep15   0:01.27 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep             835   0,0  0,0  2494864   1656   ??  U    15sep15   0:00.23 /System/Library/PrivateFrameworks/BookKit.framework
+root              834   0,0  0,0  2496156   3260   ??  Ss   15sep15   0:02.23 /usr/libexec/syspolicyd
+root              797   0,0  0,0  2547496   1788   ??  Ss   15sep15   0:11.16 /usr/sbin/spindump
+Josep             772   0,0  0,0  2501248   1196   ??  Ss   15sep15   0:00.33 /System/Library/PrivateFrameworks/PhotoLibraryPriva
+Josep             459   0,0  0,0  2543080   3528   ??  S    15sep15   0:01.18 /System/Library/PrivateFrameworks/CloudServices.fra
+Josep             451   0,0  0,1  2503440   4952   ??  S    15sep15   0:08.69 /System/Library/PrivateFrameworks/GeoServices.frame
+Josep             450   0,0  0,0  2503304   2556   ??  Ss   15sep15   0:03.70 /System/Library/PrivateFrameworks/PhotoLibraryPriva
+Josep             448   0,0  0,0  2512492   2232   ??  U    15sep15   0:02.56 /System/Library/CoreServices/ScopedBookmarkAgent
+Josep             447   0,0  0,0  2506876   1516   ??  S    15sep15   0:11.77 /System/Library/PrivateFrameworks/PhotoLibraryPriva
+root              446   0,0  0,4  2512920  32024   ??  Ss   15sep15   1:08.28 /usr/libexec/systemstatsd
+Josep             444   0,0  0,0  2501416   2812   ??  S    15sep15   0:01.87 /System/Library/PrivateFrameworks/CloudPhotoService
+Josep             443   0,0  0,1  2570756   5560   ??  S    15sep15   0:03.33 /System/Library/CoreServices/cloudphotosd.app/Conte
+Josep             415   0,0  0,0  2472036    280   ??  S    15sep15   0:00.22 /usr/libexec/SafariNotificationAgent
+root              407   0,0  0,7  2532144  59716   ??  Ss   15sep15   1:09.33 /System/Library/CoreServices/SubmitDiagInfo server-
+Josep             406   0,0  0,0  2468988    752   ??  Ss   15sep15   0:00.11 /System/Library/PrivateFrameworks/IMFoundation.fram
+Josep             397   0,0  0,1  3730672   5248   ??  S    15sep15  56:01.65 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep             396   0,0  0,0  2541044   3276   ??  S    15sep15   0:00.91 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep             395   0,0  0,1  2505204   7768   ??  S    15sep15  11:10.88 /System/Library/PrivateFrameworks/CommerceKit.frame
+Josep             394   0,0  0,0  2468920    844   ??  S    15sep15   0:00.13 /System/Library/PrivateFrameworks/CommerceKit.frame
+root              392   0,0  0,0  2514368   1132   ??  Ss   15sep15   0:02.13 /System/Library/PrivateFrameworks/SoftwareUpdate.fr
+_softwareupdate   391   0,0  0,1  4030104   7548   ??  Ss   15sep15   2:54.86 /System/Library/CoreServices/Software Update.app/Co
+Josep             389   0,0  0,0  2469740    480   ??  S    15sep15   0:01.59 /System/Library/Frameworks/CoreServices.framework/F
+root              388   0,0  0,0  2469216    412   ??  S    15sep15   0:00.05 /System/Library/Frameworks/CoreServices.framework/F
+Josep             387   0,0  0,1  2497852   4972   ??  S    15sep15   0:07.38 /System/Library/PrivateFrameworks/CloudServices.fra
+Josep             385   0,0  0,0  2534156   3196   ??  Ss   15sep15   0:00.85 /Applications/Google Drive.app/Contents/PlugIns/Fin
+Josep             370   0,0  0,0  2494080   1440   ??  Ss   15sep15   0:00.23 /System/Library/Frameworks/AddressBook.framework/Ve
+Josep             369   0,0  0,0  2534092   3264   ??  S    15sep15   0:02.50 /System/Library/CoreServices/AirPlayUIAgent.app/Con
+Josep             367   0,0  0,0  2497652   2436   ??  S    15sep15   0:00.71 /System/Library/Frameworks/InputMethodKit.framework
+root              360   0,0  0,0  2470448    844   ??  Ss   15sep15   0:01.95 /Library/CoreMediaIO/Plug-Ins/DAL/AppleCamera.plugi
+Josep             357   0,0  0,1  2499756   5128   ??  Ss   15sep15   0:00.65 /System/Library/PrivateFrameworks/CloudDocsDaemon.f
+Josep             348   0,0  0,1  2708900   4652   ??  S    15sep15   0:08.63 /System/Library/Services/AppleSpell.service/Content
+Josep             347   0,0  0,0  2498544   2696   ??  S    15sep15   0:01.23 /System/Library/CoreServices/pbs
+Josep             342   0,0  0,0  2507116   4140   ??  S    15sep15   0:08.87 /System/Library/PrivateFrameworks/ParsecUI.framewor
+Josep             341   0,0  0,1  2497516   8040   ??  Ss   15sep15   0:07.09 /System/Library/PrivateFrameworks/WeatherKit.framew
+Josep             340   0,0  0,0  2470964   1360   ??  Ss   15sep15   0:00.22 /System/Library/CoreServices/NotificationCenter.app
+Josep             339   0,0  0,1  2495260   4576   ??  S    15sep15   0:05.45 /System/Library/PrivateFrameworks/CloudServices.fra
+Josep             338   0,0  0,0  2492700   1592   ??  Ss   15sep15   0:00.31 /Applications/DiskWarrior.app/Contents/Helpers/Disk
+Josep             336   0,0  0,0  2471100   1524   ??  S    15sep15   0:01.41 /System/Library/Frameworks/Security.framework/Versi
+root              332   0,0  0,0  2469416    468   ??  Ss   15sep15   0:05.29 /usr/libexec/watchdogd
+Josep             331   0,0  0,0  2493148   2496   ??  Ss   15sep15   0:04.74 /System/Library/CoreServices/Menu Extras/AirPort.me
+root              327   0,0  0,0  2472572    832   ??  Ss   15sep15   0:00.95 /System/Library/PrivateFrameworks/PerformanceAnalys
+Josep             326   0,0  0,2  2628492  12592   ??  S    15sep15   0:24.64 /System/Library/CoreServices/Spotlight.app/Contents
+Josep             323   0,0  0,1  2500488   4416   ??  S    15sep15   0:06.46 /System/Library/CoreServices/diagnostics_agent
+Josep             322   0,0  0,1  2533336   7092   ??  S    15sep15   0:20.55 /System/Library/CoreServices/WiFiAgent.app/Contents
+Josep             319   0,0  0,0  2492936   2644   ??  S    15sep15   0:03.92 /System/Library/CoreServices/cloudpaird
+Josep             314   0,0  0,0  2496816   2700   ??  S    15sep15   0:05.77 /System/Library/CoreServices/AppleIDAuthAgent
+Josep             309   0,0  0,0  2541080   3588   ??  S    15sep15   0:00.84 /System/Library/CoreServices/Keychain Circle Notifi
+Josep             306   0,0  0,0  2496028   1092   ??  S    15sep15   0:00.24 /usr/libexec/spindump_agent
+Josep             305   0,0  0,2  2517580  19196   ??  U    15sep15   1:29.30 /System/Library/PrivateFrameworks/CloudKitDaemon.fr
+root              302   0,0  0,0  2470480   1040   ??  Ss   15sep15   0:02.66 /System/Library/PrivateFrameworks/CoreSymbolication
+Josep             301   0,0  0,1  2519652   7152   ??  S    15sep15   0:17.21 /System/Library/PrivateFrameworks/CommerceKit.frame
+root              299   0,0  0,2  2520504  16672   ??  Ss   15sep15   0:05.40 /usr/libexec/sandboxd -n PluginProcess -n 
+root              297   0,0  0,0  2492768   1612   ??  Ss   15sep15   0:01.29 /System/Library/CoreServices/CrashReporterSupportHe
+Josep             296   0,0  0,2  2489976  14776   ??  S    15sep15   1:59.36 /usr/libexec/nsurlstoraged
+Josep             295   0,0  0,0  2501612   1568   ??  S    15sep15   0:00.20 /System/Library/PrivateFrameworks/CallHistory.frame
+root              294   0,0  0,0  2497324   3884   ??  Ss   15sep15   0:04.57 /usr/libexec/amfid
+Josep             293   0,0  0,1  2529368   9092   ??  S    15sep15   0:14.50 /System/Library/PrivateFrameworks/MessagesKit.frame
+Josep             292   0,0  0,0  2493728   1520   ??  S    15sep15   0:00.28 /System/Library/PrivateFrameworks/IMDPersistence.fr
+Josep             291   0,0  0,1  2516252  10276   ??  S    15sep15   0:16.40 /System/Library/PrivateFrameworks/TelephonyUtilitie
+Josep             290   0,0  0,1  2498444   5800   ??  S    15sep15   0:08.72 /System/Library/PrivateFrameworks/IMCore.framework/
+Josep             289   0,0  0,1  2550128   7584   ??  Ss   15sep15   0:04.41 /System/Library/CoreServices/Dock.app/Contents/XPCS
+root              288   0,0  0,0  2479456   2036   ??  Ss   15sep15   0:03.64 /usr/sbin/filecoordinationd
+Josep             287   0,0  0,0  2495236   2516   ??  S    15sep15   0:10.57 /System/Library/CoreServices/lsuseractivityd
+Josep             284   0,0  0,0  2494748   2632   ??  S    15sep15   0:06.62 /usr/libexec/fmfd
+Josep             282   0,0  0,0  2492964   1020   ??  S    15sep15   0:00.34 /System/Library/PrivateFrameworks/AskPermission.fra
+Josep             281   0,0  0,1  2494184   5016   ??  S    15sep15   0:07.89 /System/Library/CoreServices/mapspushd
+Josep             280   0,0  0,0  2501632   2880   ??  S    15sep15   0:00.71 /System/Library/PrivateFrameworks/CallHistory.frame
+Josep             279   0,0  0,0  2493304   1296   ??  S    15sep15   1:47.06 /usr/libexec/SafariCloudHistoryPushAgent
+Josep             278   0,0  0,1  2655268   4416   ??  S    15sep15   0:04.44 /System/Library/CoreServices/iconservicesagent
+Josep             276   0,0  0,2  2516652  14132   ??  Ss   15sep15   1:35.15 /System/Library/PrivateFrameworks/CalendarAgent.fra
+Josep             275   0,0  0,1  2564468   9824   ??  S    15sep15   0:17.15 /System/Library/PrivateFrameworks/InternetAccounts.
+Josep             273   0,0  0,1  2509320   8164   ??  S    15sep15   6:47.16 /System/Library/Frameworks/Accounts.framework/Versi
+Josep             271   0,0  0,0  2494624   4124   ??  S    15sep15   0:05.47 /usr/libexec/secinitd
+Josep             270   0,0  0,1  2530300   4220   ??  S    15sep15   0:49.58 /System/Library/Frameworks/ApplicationServices.fram
+root            17043   0,0  0,0  2443192    848 s000  R+    4:06PM   0:00.01 ps aux
+Josep             268   0,0  0,0  2494956   2092   ??  S    15sep15   0:00.77 /System/Library/CoreServices/SocialPushAgent.app/Co
+Josep             264   0,0  0,1  2498280   6244   ??  S    15sep15   0:08.91 /usr/libexec/nsurlsessiond
+Josep             263   0,0  0,0  2501664   1376   ??  S    15sep15   0:00.53 /System/Library/CoreServices/RemoteManagement/ARDAg
+Josep             262   0,0  0,1  2497788   5356   ??  S    15sep15   0:16.11 /usr/sbin/usernoted
+Josep             260   0,0  0,0  2497504   2884   ??  S    15sep15   0:31.56 /usr/libexec/secd
+Josep             259   0,0  0,1  2508804   8476   ??  S    15sep15   0:12.10 /System/Library/PrivateFrameworks/IDS.framework/ide
+Josep             257   0,0  0,1  2502064   5976   ??  S    15sep15   0:02.16 /System/Library/PrivateFrameworks/CloudDocsDaemon.f
+Josep             256   0,0  0,1  2500660   5036   ??  S    15sep15   0:35.10 /System/Library/PrivateFrameworks/TCC.framework/Res
+Josep             255   0,0  0,1  2499484   4512   ??  S    15sep15   0:05.32 /usr/libexec/pkd
+Josep             254   0,0  0,1  2512964   7804   ??  S    15sep15   0:13.95 /usr/libexec/sharingd
+root              252   0,0  0,0  2472368   1652   ??  Ss   15sep15   0:02.05 /System/Library/CoreServices/backupd.bundle/Content
+root              251   0,0  0,0  2471884   1640   ??  Ss   15sep15   0:04.98 /System/Library/PrivateFrameworks/CacheDelete.frame
+_coreaudiod       250   0,0  0,0  2493152    380   ??  Ss   15sep15   0:00.05 /System/Library/Frameworks/CoreAudio.framework/Vers
+root              245   0,0  0,0  2500512    944   ??  Ss   15sep15   0:00.23 /System/Library/PrivateFrameworks/TCC.framework/Res
+Josep             244   0,0  0,0  2468604    188   ??  S    15sep15   0:00.03 /usr/sbin/pboard
+Josep             243   0,0  1,4  3112760 116804   ??  S    15sep15   8:14.29 /System/Library/CoreServices/Finder.app/Contents/Ma
+Josep             242   0,0  0,2  2590144  16604   ??  U    15sep15   1:03.62 /System/Library/CoreServices/SystemUIServer.app/Con
+Josep             238   0,0  0,4  2512976  29968   ??  U    15sep15   1:06.62 /usr/sbin/cfprefsd agent
+Josep             236   0,0  0,1  2485412   6276   ??  S    15sep15   1:35.39 /usr/sbin/distnoted agent
+root              233   0,0  0,0  2493372    996   ??  Ss   15sep15   0:11.47 /usr/libexec/securityd_service
+root              231   0,0  0,0  2469560   1056   ??  Ss   15sep15   0:00.13 /System/Library/PrivateFrameworks/AccountPolicy.fra
+root              225   0,0  0,0  2471788   1024   ??  Us   15sep15   0:01.58 /System/Library/Frameworks/Security.framework/Versi
+root              215   0,0  0,0  2469660    968   ??  Ss   15sep15   0:00.36 /System/Library/PrivateFrameworks/AmbientDisplay.fr
+root              213   0,0  0,0  2528844    932   ??  Ss   15sep15   0:02.61 /System/Library/Frameworks/OpenGL.framework/Version
+_nsurlstoraged    211   0,0  0,0  2469324   1968   ??  Ss   15sep15   0:01.21 /usr/libexec/nsurlstoraged
+_www              210   0,0  0,0  2482524   1240   ??  S    15sep15   0:00.44 /usr/sbin/httpd -D FOREGROUND
+root              207   0,0  0,9  4376632  78516   ??  Ss   15sep15   3:36.65 /System/Library/Frameworks/CoreServices.framework/F
+root              193   0,0  0,0  2496136   2072   ??  Ss   15sep15   0:01.49 /usr/sbin/diskmanagementd
+root              186   0,0  0,0  2471900   2204   ??  Ss   15sep15   0:34.59 sysmond
+root              178   0,0  0,3  2589100  22560   ??  Ss   15sep15  16:08.69 /usr/libexec/ApplicationFirewall/socketfilterfw
+root              177   0,0  0,0  2468936    892   ??  Ss   15sep15   0:00.65 /usr/libexec/corestoraged
+root              176   0,0  0,0  2469072    672   ??  Ss   15sep15   0:00.11 /System/Library/CryptoTokenKit/com.apple.ifdreader.
+root              174   0,0  0,0  2472336    364   ??  Ss   15sep15   0:00.03 /usr/libexec/nehelper
+root              173   0,0  0,0  2492900   1632   ??  Ss   15sep15   0:03.48 /usr/libexec/usbd
+root              172   0,0  0,0  2471156    980   ??  Ss   15sep15   0:21.11 /usr/sbin/ntpd -c /private/etc/ntp-restrict.conf -n
+_nsurlsessiond    171   0,0  0,0  2469304   1024   ??  Ss   15sep15   0:00.36 /usr/libexec/nsurlsessiond --privileged
+root              170   0,0  0,0  2469748    520   ??  Ss   15sep15   0:00.79 /usr/libexec/networkd_privileged
+root              169   0,0  0,1  2496644   4392   ??  Ss   15sep15   0:07.68 /usr/libexec/findmydeviced
+root              151   0,0  0,0  2493372   1100   ??  Ss   15sep15   0:00.17 /usr/libexec/secinitd
+root              147   0,0  0,0  2469604    680   ??  Ss   15sep15   0:00.10 /System/Library/Frameworks/CryptoTokenKit.framework
+root              146   0,0  0,0  2471660    720   ??  Ss   15sep15   0:00.11 /System/Library/Frameworks/PCSC.framework/Versions/
+root              130   0,0  0,0  2497808   3448   ??  Us   15sep15   0:02.10 /System/Library/Frameworks/Security.framework/Versi
+root              126   0,0  0,0  2513900   3000   ??  Ss   15sep15   0:24.99 /usr/sbin/cfprefsd daemon
+root              125   0,0  0,0  2495416   1176   ??  Ss   15sep15   0:00.36 /usr/libexec/diagnosticd
+root              123   0,0  0,2  2554116  18368   ??  Ss   15sep15   0:20.55 /System/Library/CoreServices/coreservicesd
+_distnote         108   0,0  0,0  2470788   2028   ??  Ss   15sep15   0:17.06 /usr/sbin/distnoted daemon
+root              100   0,0  0,0  2494448   3568   ??  Ss   15sep15   0:14.22 /usr/libexec/taskgated -s
+root               99   0,0  0,0  2471856   1776   ??  Ss   15sep15   0:49.93 /usr/sbin/notifyd
+root               97   0,0  0,0  2479800   3044   ??  Ss   15sep15  20:03.88 /usr/libexec/hidd
+root               95   0,0  0,0  2461048    396   ??  Ss   15sep15   0:00.03 /usr/sbin/KernelEventAgent
+root               94   0,0  0,0  2468924    920   ??  Ss   15sep15   0:00.10 /System/Library/CoreServices/logind
+Josep              93   0,0  0,1  2577516   7552   ??  Ss   15sep15   0:33.61 /System/Library/CoreServices/loginwindow.app/Conten
+root               92   0,0  0,0  2525492   2328   ??  Ss   15sep15   0:34.00 /System/Library/PrivateFrameworks/GenerationalStora
+root               91   0,0  0,0  2469260    716   ??  Ss   15sep15   0:00.09 /usr/libexec/stackshot -t -O
+_mdnsresponder     89   0,0  0,0  2496144   4148   ??  Ss   15sep15   0:58.84 /usr/sbin/mDNSResponder
+root               87   0,0  0,0  2469844    916   ??  Ss   15sep15   0:00.24 /System/Library/PrivateFrameworks/Heimdal.framework
+root               85   0,0  0,0  2469524    676   ??  Ss   15sep15   0:00.13 autofsd
+root               84   0,0  0,0  2494024   2228   ??  Ss   15sep15   0:01.53 /usr/sbin/blued
+_locationd         81   0,0  0,1  3581504  10220   ??  Ss   15sep15   1:08.13 /usr/libexec/locationd
+root               79   0,0  0,1  2496568   5300   ??  Ss   15sep15   1:24.53 /usr/sbin/securityd -i
+root               77   0,0  0,1  2511316  10252   ??  Ss   15sep15   0:55.16 /System/Library/CoreServices/launchservicesd
+root               76   0,0  0,0  2478300   1600   ??  Ss   15sep15   0:11.98 /usr/sbin/httpd -D FOREGROUND
+root               75   0,0  0,1  2498672   7040   ??  Ss   15sep15   0:33.17 /System/Library/PrivateFrameworks/ApplePushService.
+root               73   0,0  0,0  2473064   1936   ??  Ss   15sep15   0:00.65 /usr/sbin/wirelessproxd
+root               71   0,0  0,0  2496712   3112   ??  Us   15sep15   0:01.85 /System/Library/PrivateFrameworks/WirelessDiagnosti
+root               70   0,0  0,1  2512864   4796   ??  Ss   15sep15   0:13.51 /System/Library/CoreServices/backupd.bundle/Content
+root               68   0,0  0,0  2461336    204   ??  Ss   15sep15   0:00.02 /usr/libexec/wdhelper
+root               67   0,0  0,0  2470824   1760   ??  Ss   15sep15   0:02.43 /System/Library/CoreServices/backupd.bundle/Content
+root               66   0,0  0,1  2508524  11576   ??  Ss   15sep15   2:34.44 /usr/libexec/coreduetd
+root               62   0,0  0,0  2494736   1688   ??  Ss   15sep15   0:02.33 /usr/libexec/diskarbitrationd
+root               61   0,0  0,0  2469404    664   ??  Ss   15sep15   0:00.10 /System/Library/CoreServices/iconservicesagent
+_iconservices      60   0,0  0,0  2502568   1384   ??  Ss   15sep15   0:00.54 /System/Library/CoreServices/iconservicesd
+root               56   0,0  0,5  2695548  41456   ??  Ss   15sep15   6:09.64 /System/Library/Frameworks/CoreServices.framework/F
+root               54   0,0  0,0  2475632   2912   ??  SNs  15sep15   0:02.16 /usr/libexec/warmd
+root               53   0,0  0,2  2507944  13836   ??  Ss   15sep15   2:27.54 /usr/libexec/airportd
+root               50   0,0  0,0  2494844   1936   ??  Ss   15sep15   0:21.46 /System/Library/CoreServices/powerd.bundle/powerd
+root               49   0,0  0,1  2500596   5012   ??  Ss   15sep15   0:58.82 /usr/libexec/configd
+_appleevents       48   0,0  0,0  2496532   3584   ??  Ss   15sep15   0:02.74 /System/Library/CoreServices/appleeventsd --server
+root               46   0,0  0,1  2505200   8044   ??  Ss   15sep15   1:04.22 /System/Library/CoreServices/backupd.bundle/Content
+root               45   0,0  0,0  2469016   1056   ??  Ss   15sep15   0:01.99 /usr/libexec/thermald
+root               43   0,0  0,1  2813952   6212   ??  Ss   15sep15   1:02.86 /System/Library/Frameworks/CoreServices.framework/V
+root               42   0,0  0,2  2507496  17224   ??  Ss   15sep15   1:28.37 /usr/libexec/kextd
+root               40   0,0  0,1  2503832   9596   ??  Ss   15sep15   0:59.98 /usr/libexec/UserEventAgent (System)
+Josep             269   0,0  0,1  2517760   5652   ??  S    15sep15   0:08.03 /System/Library/PrivateFrameworks/GameCenterFoundat
+Josep           17035   0,0  2,4  2803288 205132   ??  S     4:01PM   0:11.55 /Applications/Sublime Text 2.app/Contents/MacOS/Sub
+Josep           17030   0,0  0,0  2461020   1388 s000  S     3:59PM   0:00.03 -bash
+root            17029   0,0  0,0  2469496   2904 s000  Us    3:59PM   0:00.20 login -pf Josep
+Josep           17025   0,0  0,2  2546432  13780   ??  S     3:58PM   0:00.13 /System/Library/Image Capture/Support/Image Capture
+Josep           17023   0,0  0,0  2469944   2532   ??  Us    3:58PM   0:00.01 /Applications/Preview.app/Contents/XPCServices/com.
+Josep           17021   0,0  0,3  2499388  24784   ??  S     3:58PM   0:00.20 /System/Library/Frameworks/OpenGL.framework/Version
+Josep           17019   0,0  1,8  3931052 147728   ??  S     3:58PM   0:09.40 /Applications/Preview.app/Contents/MacOS/Preview -p
+Josep           17010   0,0  0,1  2492840   5564   ??  S     3:58PM   0:00.02 /System/Library/PrivateFrameworks/HelpData.framewor
+Josep           17002   0,0  0,5  3309672  45856   ??  S     3:56PM   0:00.50 /Applications/Opera.app/Contents/Versions/28.0.1750
+Josep           16998   0,0  0,4  3236772  37388   ??  S     3:56PM   0:00.47 /Applications/Opera.app/Contents/Versions/28.0.1750
+Josep           16996   0,0  1,7  2826796 145332   ??  S     3:56PM   0:05.69 /Applications/Opera.app/Contents/Versions/28.0.1750
+Josep           16994   0,0  1,2  3674316 102784   ??  S     3:56PM   0:19.67 /Applications/Opera.app/Contents/MacOS/Opera
+Josep           16988   0,0  0,1  2474108   9336   ??  S     3:50PM   0:00.04 /System/Library/Frameworks/CoreServices.framework/F
+MacBook-Pro-de-Josep:fso_pract3 Josep$ 
