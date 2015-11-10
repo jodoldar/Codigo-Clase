@@ -78,7 +78,9 @@ any' p xs = if length [ x | x <- xs, p x] >= 1 then True else False
 all :: (a -> Bool) -> [a] -> Bool
 all' p xs = if length [ x | x <- xs, p x] == length xs then True else False
 
-
+-- Ejercicio 1.- Sobrecargar los operadores aritmeticos (+ y *) de la clase
+--  Num para poder usarlos para sumar y multiplicar naturales.
+(+)::Nat a=> a -> a -> a
 
 
 
