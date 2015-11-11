@@ -12,15 +12,15 @@ fact n = n * fact(n-1)
 numCbetw2 :: Char -> Char -> Int
 numCbetw2 a b = abs(((ord b)-(ord a)))-1
 
-ejer2 :: Int -> Int -> Int
-ejer2 x y
-    |y < x = 0
-    |otherwise = x + ejer2(x+1) y 
+sumatorio :: Int -> Int -> Int
+sumatorio ini fin
+    |ini==fin = ini
+    |otherwise = ini + (sumatorio(ini+1) fin) 
 
-max' :: Int -> Int -> Int
+max' :: (Ord a)=> a -> a -> a
 max' x y
     |x >= y = x
-    |otherwise = y
+    |x < y = y
 
 leapyear :: Int -> Bool
 leapyear x 
