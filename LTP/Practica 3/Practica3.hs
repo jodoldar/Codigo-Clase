@@ -45,5 +45,5 @@ remainder x y
 
 sumFacts :: Int -> Int
 sumFacts x 
-    |x<=0 = 0
+    |x<=0 = 1
     |otherwise = fact x  + sumFacts(x-1)
