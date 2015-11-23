@@ -1,0 +1,18 @@
+out:Salida redireccionada
+osep  staff   578 23 nov 16:28 .
+drwxr-xr-x  20 Josep  staff   680 23 nov 16:24 ..
+-rw-r--r--@  1 Josep  staff  6148 23 nov 16:25 .DS_Store
+-rwxr-xr-x   1 Josep  staff  8688 23 nov 15:27 compartir
+-rw-r--r--@  1 Josep  staff   641 23 nov 15:27 compartir_archivo.c
+-rwxr-xr-x   1 Josep  staff  8572 23 nov 15:01 descriptor
+-rw-r--r--@  1 Josep  staff   701 23 nov 14:56 descriptor.c
+-rwxr-xr-x   1 Josep  staff  8520 23 nov 15:03 descriptor_sal
+-rw-r--r--@  1 Josep  staff   739 23 nov 15:03 descriptor_salida.c
+-rwxr-xr-x   1 Josep  staff  8800 23 nov 16:28 ls_redir
+-rw-r--r--@  1 Josep  staff   744 23 nov 16:28 ls_redir.c
+-rwx------   1 Josep  staff     0 23 nov 16:27 ls_salida.txt
+-rwx------   1 Josep  staff    41 23 nov 15:27 mensajes.txt
+-rwxr-xr-x   1 Josep  staff  8752 23 nov 15:48 redir_sal
+-rw-r--r--@  1 Josep  staff   617 23 nov 15:48 redir_sal.c
+-rwx------   1 Josep  staff    26 23 nov 15:48 salida.txt
+-rw-r--r--@  1 Josep  staff  1196 19 nov  2013 un_tubo.c

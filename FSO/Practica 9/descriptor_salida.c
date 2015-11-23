@@ -1,0 +1,25 @@
+//descriptor_salida.c
+
+#include <fcntl.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main (int argc,char *argv[]) {
+    char *men1 = "men1: Escribo en descriptor 1 (salida)\n";
+    char *men2 = "men2: Escribo en descriptor 2 (error)\n";
+    char *men3 = "men3: Escribo en descriptor 1 (salida)\n";
+    char *men4 = "men4: Escribo en descriptor 2 (error)\n";
+    char *men5 = "men5: Escribo en descriptor 1 (salida)\n";
+    char *men6 = "men6: Escribo en descriptor 2 (error)\n";
+	
+    write(1,men1,strlen(men1));
+    write(2,men2,strlen(men2));
+    close(1);
+    write(1,men3,strlen(men3));
+    write(2,men4,strlen(men4));
+    close(2);
+    write(1,men5,strlen(men5));
+    write(2,men6,strlen(men6));
+    return(0);
+}
