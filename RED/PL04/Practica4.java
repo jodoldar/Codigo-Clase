@@ -99,6 +99,9 @@ public class Practica4
             Socket sc = new Socket("smtp.upv.es",25);
             PrintWriter salida = new PrintWriter(sc.getOutputStream(),true);
             Scanner entrada = new Scanner(sc.getInputStream());
+            System.out.println(entrada.nextLine());
+            
+
             salida.println("helo redes.upv.es");
             System.out.println(entrada.nextLine());
             salida.println("mail from: jodoldar@inf.upv.es");
@@ -108,9 +111,90 @@ public class Practica4
             salida.println("data");
             System.out.println(entrada.nextLine());
             salida.println("subject:Correo de prueba");
-            salida.println("Contenido de prueba\n");
+            salida.println("Contenido de prueba");
             salida.println(".\n");
             System.out.println(entrada.nextLine());
+            salida.println("quit");
+            sc.close();
+        }catch(IOException e1){
+            System.err.println(e1);
+        }
+    }
+    
+    /**
+     * Ejercicio 4b (Opcional) Completa el cliente anterior para que compruebe si las respuestas
+     * del servidor indican que la orden del cliente fue la correcta. En caso de fallo el cliente
+     * enviará la orden “QUIT” y finalizará el programa. 
+     */
+    public static void metodo4b(){
+        try{
+            Socket sc = new Socket("smtp.upv.es",25);
+            String aux;
+            PrintWriter salida = new PrintWriter(sc.getOutputStream(),true);
+            Scanner entrada = new Scanner(sc.getInputStream());
+            
+            aux = entrada.nextLine();
+            System.out.println(aux);
+            if(!aux.substring(0,3).equals("220")){
+                System.out.println("Fallo en el proceso");
+                salida.println("quit");
+                sc.close();
+                System.exit(1);
+            }
+            
+            salida.println("helo redes.upv.es");
+            aux = entrada.nextLine();
+            System.out.println(aux);
+            if(!aux.substring(0,3).equals("250")){
+                System.out.println("Fallo en el proceso");
+                salida.println("quit");
+                sc.close();
+                System.exit(1);
+            }
+            
+            salida.println("mail from: jodoldar@inf.upv.es");
+            aux = entrada.nextLine();
+            System.out.println(aux);
+            if(!aux.substring(0,3).equals("250")){
+                System.out.println("Fallo en el proceso");
+                salida.println("quit");
+                sc.close();
+                System.exit(1);
+            }
+            
+            salida.println("rcpt to: gg");
+            aux = entrada.nextLine();
+            System.out.println(aux);
+            if(!aux.substring(0,3).equals("250")){
+                System.out.println("Fallo en el proceso");
+                salida.println("quit");
+                sc.close();
+                System.exit(1);
+            }
+            
+            salida.println("data");
+            aux = entrada.nextLine();
+            System.out.println(aux);
+            if(!aux.substring(0,3).equals("354")){
+                System.out.println("Fallo en el proceso");
+                salida.println("quit");
+                sc.close();
+                System.exit(1);
+            }
+            
+            salida.println("subject:Correo de prueba");
+            salida.println("Contenido de prueba");
+            salida.println("");
+            salida.println(".");
+            aux = entrada.nextLine();
+            System.out.println(aux);
+            if(!aux.substring(0,3).equals("250")){
+                System.out.println("Fallo en el proceso");
+                salida.println("quit");
+                sc.close();
+                System.exit(1);
+            }
+            salida.println("quit");
             sc.close();
         }catch(IOException e1){
             System.err.println(e1);
