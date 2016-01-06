@@ -5,6 +5,9 @@ import Data.Char
 nextchar :: Char -> Char
 nextchar c = chr ((ord c) + 1)
 
+nextchar' :: Char -> Char
+nextchar' c = succ c
+
 fact :: Int -> Int
 fact 0 = 1
 fact n = n * fact(n-1)
@@ -33,13 +36,12 @@ daysAmonth :: Int -> Int -> Int
 daysAmonth x y 
     |x<8 && odd x = 31
     |x>=8 && even x = 31
-    |x==2 && leapyear y = 29
-    |x==2 = 28
+    |x==2 = (if leapyear y then 29 else 28)
     |otherwise = 30
 
 remainder :: Int -> Int -> Int
 remainder x y 
-    |x>y = remainder (x-y) y
+    |x>y = (x-y) `remainder` y
     |x==y = 0
     |otherwise = x
 
