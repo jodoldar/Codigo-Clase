@@ -157,4 +157,19 @@ public class TablaHash<C,V> implements Map<C,V> {
         }
         return res;
     }
+    
+    public int masDeLaMedia(){
+        int res = 0;
+        double media = factorDeCarga();
+        for(int i=0;i<elArray.length;i++){
+            if(elArray[i].talla()>media){
+                res++;
+            }
+        }
+        return res;
+    }
+
+    private double factorDeCarga() {
+        return 0;
+    }
 }
