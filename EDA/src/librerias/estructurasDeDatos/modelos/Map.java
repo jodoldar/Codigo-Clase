@@ -1,17 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package librerias.estructurasDeDatos.modelos;
 
 /**
- *
+ * Modelo Diccionario SIN claves repetidas, o Map: Busqueda Dinamica 
+ * de una Entrada de Clave dada en una Coleccion, para recuperar el 
+ * Valor asociado a esta 
+ * @param <C>, el tipo de sus claves
+ * @param <V>, el tipo de sus valores
+ * @version Marzo 2016
  * @author Josep Dols
  */
 public interface Map<C,V> {
     // Añade la entrada (c,v) y devuelve el antiguo valor que
-    // tenía dicha clave (o null si no tenía ningún valor asociado) V insertar(C c, V v);
+    // tenía dicha clave (o null si no tenía ningún valor asociado
     V insertar(C c, V v);
     // Elimina la entrada con clave c y devuelve su valor asociado 
     // (o null si no hay ninguna entrada con dicha clave)

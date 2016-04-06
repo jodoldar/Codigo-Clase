@@ -1,8 +1,5 @@
 package librerias.estructurasDeDatos.modelos;
 
-// comprueba que lo has puesto en el lugar correcto
-// package librerias.estructurasDeDatos.modelos;
-
 /**
  * Modelo de una Cola de Prioridad, o de Busqueda Dinamica 
  * del Elemento de maxima prioridad en una Coleccion
@@ -13,17 +10,28 @@ package librerias.estructurasDeDatos.modelos;
 
 public interface ColaPrioridad<E extends Comparable<E>> {
 
-    // metodos Modificadores del estado de una Cola de Prioridad (CP):
-    /** atendiendo a su prioridad, inserta el Elemento e 
-     * en una Cola de Prioridad **/
+    // Métodos modificadores del estado de una Cola de Prioridad (CP):
+    
+    /** Atendiendo a su prioridad, inserta el Elemento e en una Cola de Prioridad
+     * @param e Elemento a insertar en la cola.
+     */
     void  insertar(E e);
+    
     /** SII !esVacia(): obtiene y elimina el Elemento con 
-     * maxima prioridad de una CP **/
+     * maxima prioridad de una CP
+     * @return Elemento con valor mínimo.
+     */
     E  eliminarMin();
     
-    // metodos Consultores del estado de una Cola de Prioridad (CP):
-    /** SII !esVacia(): obtiene el Elemento con maxima prioridad de una CP **/
+    // Métodos consultores del estado de una Cola de Prioridad (CP):
+    
+    /** SII !esVacia(): obtiene el Elemento con maxima prioridad de una CP
+     * @return Elemento con valor mínimo.
+     */
     E  recuperarMin();
-    /** comprueba si una CP esta vacia **/
+    
+    /** Comprueba si una CP esta vacia
+     * @return True - si la cola está vacía; False - si la cola NO está vacía.
+     */
     boolean esVacia();
 }

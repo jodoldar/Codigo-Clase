@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Pixel()
+comment0.text=Crea\ un\ pixel\ de\ color\ negro
+comment1.params=red\ green\ blue
+comment1.target=Pixel(int,\ int,\ int)
+comment1.text=\ Crea\ un\ pixel\ con\ valores\ de\ rojo(r),\ verde(g)\ y\ azul(b)\n\ \ \ \ \ \ \ \ @param\ r,\ rojo\n\ \ \ \ \ \ \ \ @param\ g,\ verde\n\ \ \ \ \ \ \ \ @param\ b,\ azul\n
+comment2.params=
+comment2.target=int\ getR()
+comment2.text=Devuelve\ el\ valor\ del\ componente\ rojo
+comment3.params=
+comment3.target=int\ getG()
+comment3.text=Devuelve\ el\ valor\ del\ componente\ verde
+comment4.params=
+comment4.target=int\ getB()
+comment4.text=Devuelve\ el\ valor\ del\ componente\ azul
+comment5.params=o
+comment5.target=boolean\ equals(java.lang.Object)
+comment5.text=\ Devuelve\ true\ si\ o\ es\ un\ pixel\ con\ los\ mismos\ componentes\ que\ this;\nfalse\ en\ caso\ contrario
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=
+comment7.target=int\ hashCode()
+comment7.text=suma\ ponderada\ de\ las\ componentes\ de\ un\ pixel
+numComments=8
