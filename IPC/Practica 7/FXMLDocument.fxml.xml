@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practica7.FXMLDocumentController">
+   <children>
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Line Chart">
+               <content>
+                  <LineChart fx:id="chart">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </content>
+            </Tab>
+          <Tab text="Area Chart">
+               <content>
+                  <AreaChart fx:id="chart2">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis2" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis2" side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+               </content>
+            </Tab>
+            <Tab text="Bar Chart">
+               <content>
+                  <BarChart fx:id="chart3">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" fx:id="xAxis3" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis3" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </content>
+            </Tab>
+            <Tab text="Pie Chart">
+               <content>
+                  <PieChart fx:id="chart4" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

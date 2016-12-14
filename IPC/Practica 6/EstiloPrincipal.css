@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13-abr-2016, 15:35:13
+    Author     : jodoldar
+*/
+
+.root{
+    -fx-font-size:30;
+    -fx-font-family: "Helvetica";
+    -fx-border-width: 0.2;
+    -fx-border-color: black;
+}
+
+.text-zona{
+    -fx-background-color:black;
+    -fx-text-fill: white;
+    -fx-font-size: 60;
+    -fx-alignment: BOTTOM_RIGHT;
+    
+}
+
+.boton-gris{
+    -fx-background-color: gainsboro;
+    -fx-border-color: black;
+    -fx-border-width: 0.2;
+}
+.boton-gris:pressed{
+    -fx-background-color: darkgray;
+}
+
+.boton-naranja{
+    -fx-background-color: orange;
+    -fx-border-color: black;
+    -fx-border-width: 0.2;
+}
+.boton-naranja:pressed{
+    -fx-background-color: chocolate;
+}
+.boton-especial{
+    -fx-alignment: center-left;
+    -fx-label-padding: 0px 0px 0px 15px;
+}
+.boton-especial:pressed{
+    -fx-background-color: darkgray;
+}
