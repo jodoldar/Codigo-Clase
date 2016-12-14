@@ -1,0 +1,106 @@
+### ESTRUCTURA DE COMPUTADORES (ETS Eng. Inf.)
+##  
+## marzo de 2014
+##
+## PRÁCTICA 13: SINCRONIZACIÓN POR INTERRUPCIONES
+##
+## Código inicial del manejador
+
+
+##############################################################
+##              ÁREA DE DATOS DEL MANEJADOR                 ##
+##############################################################
+
+        .kdata
+var1:   .word 0xFFFFFFFF
+contexto: .space 20
+
+#############################################################
+##                  CÓDIGO DEL MANEJADOR                   ##
+#############################################################
+
+        .ktext 0x80000080
+		
+        ## Preserva el contexto del programa de usuario
+        .set noat
+		sw $at, 0($k1)
+		.set at
+		sw $t0, 4($k1)
+		sw $a0, 8($k1)
+		sw $v0, 12($k1)
+		sw $t1, 16($k1)
+
+        ## Identifica y trata excepciones
+        mfc0 $t1, $13
+        andi $t0,$t1,0x003C
+        bnez $t0, retexc		#No es interrupcion, salto a restaurar
+
+        andi $t1,$t1,0xFC00
+        li $t0, 0x0400
+        beq $t1,$t0,int0		#Si es de teclado se salta a int0
+
+        li $t0, 0x1000
+        beq $t1, $t0, int2		#Si es de reloj se salta a int2
+
+        b retexc				#Si no se reconoce se devuelve el contexto
+
+        ## Manejo de la interrupción del teclado
+int0:   li $v0,11
+        li $a0, '*'
+        syscall
+        li $t0, 0xFFFF0000
+        lw $a0, 4($t0)
+        b retexc
+
+        ## Manejo de la interrupcion del reloj
+int2:	la $t0, 0xFFFF0010
+		li $t1, 0x01
+		sb $t1, 0($t0)
+		b retexc
+		
+		##Restaura el contexto del programa de usuario
+retexc:	.set noat
+		lw $at, 0($k1)
+		.set at
+		lw $t0, 4($k1)
+		lw $a0, 8($k1)
+		lw $v0, 12($k1)
+		lw $t1, 16($k1)
+		
+        mfc0 $k0,$14
+        rfe
+        jr $k0 
+
+#############################################################
+##                    CÓDIGO DE INICIO                     ##
+#############################################################
+
+        .text
+        .globl __start 
+__start: 
+        ## Código de inicio
+        ## HAY QUE PONER CÓDIGO AQUÍ
+		
+		la $k1, contexto			# Cargar la dirección para guardar el contexto
+    	
+    	## Bloque de activación de las interrupciones de teclado
+        la $t0, 0xFFFF0000
+        li $t1, 2
+        sb $t1, 0($t0)
+		
+		## Bloque de activación de las interrupciones del reloj
+		la $t0, 0xFFFF0010
+		li $t1, 2
+		sb $t1, 0($t0)
+		
+		## Bloque de mascara para el coprocesador 0
+        li $t1, 0x0503
+        mtc0 $t1,$12
+
+        ## Salto al programa de usuario
+        jal main
+
+        ## Código de terminación
+        li $v0, 10
+        syscall  # Función exit
+
