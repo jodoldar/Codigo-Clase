@@ -10,3 +10,4 @@ Actualmente, la lista de asignaturas que se encuentran en el repositorio son:
  * LTP
  * PRG
  * RED
+ * TAL
