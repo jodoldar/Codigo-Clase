@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="680.0" prefWidth="954.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.MainWindowController">
+   <center>
+      <TabPane fx:id="panel" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab closable="false" text="Resumen">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox minWidth="-Infinity" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Pane minWidth="200.0" prefHeight="560.0" prefWidth="298.0" style="-fx-border-color: BLACK;">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="250.0" prefHeight="564.0" prefWidth="298.0">
+                                             <children>
+                                                <Label text="Fecha y hora:">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="fechaHora" text="Label">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label text="Duración:">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="duracion" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Tiempo en movimiento:">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="tiempoMovimiento" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label text="Distancia recorrida:">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="5.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="distRecorrida" text="Label">
+                                                   <VBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children></VBox>
+                              <VBox minWidth="-Infinity" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: BLACK;">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox prefHeight="208.0" prefWidth="306.0">
+                                             <children>
+                                                <Label text="Desnivel:">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../up_line.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="desnivelUp" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="m.">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../down_line.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="desnivelDown" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="m.">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: BLACK;">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox prefHeight="208.0" prefWidth="306.0">
+                                             <children>
+                                                <Label text="Velocidad:">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../high_speed.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="speedUp" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="Km/h">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../low_speed.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="speedMid" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="Km/h">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children></VBox>
+                              <VBox alignment="TOP_CENTER" minWidth="-Infinity" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: BLACK;">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox prefHeight="208.0" prefWidth="306.0">
+                                             <children>
+                                                <Label text="Frecuencia cardiaca:">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../up_arrow.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="frecUp" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="ppm.">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../flat_arrow.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="frecMid" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="ppm.">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../down_arrow.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="frecDown" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="ppm.">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: BLACK;">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox prefHeight="208.0" prefWidth="306.0">
+                                             <children>
+                                                <Label text="Cadencia:">
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../up_arrow.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="cadenceUp" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="r.p.m.">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT">
+                                                   <children>
+                                                      <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../flat_arrow.png" />
+                                                         </image>
+                                                         <HBox.margin>
+                                                            <Insets left="15.0" />
+                                                         </HBox.margin>
+                                                      </ImageView>
+                                                      <Label fx:id="cadenceMid" text="Label">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label text="r.p.m.">
+                                                         <padding>
+                                                            <Insets left="5.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab closable="false" text="Gráficos">
+               <content>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label fx:id="chartLabel" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <AreaChart fx:id="chart1" createSymbols="false">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </VBox.margin>
+                        </AreaChart>
+                        <LineChart fx:id="chart2" createSymbols="false">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" />
+                           </VBox.margin>
+                        </LineChart>
+                        <LineChart fx:id="chart3" createSymbols="false">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" />
+                           </VBox.margin>
+                        </LineChart>
+                        <LineChart fx:id="chart4" createSymbols="false">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" />
+                           </VBox.margin>
+                        </LineChart>
+                     </children>
+                  </VBox>
+               </content></Tab>
+            <Tab closable="false" text="Frec. Cardiaca">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="397.0" layoutY="78.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="315.0" style="-fx-border-color: BLACK;">
+                                       <children>
+                                          <VBox layoutX="1.0" layoutY="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="315.0">
+                                             <children>
+                                                <Label text="Zonas cardiacas:">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label prefWidth="156.0" text="Z1 - Recuperación">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="FC&lt;60%">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label prefWidth="156.0" text="Z2 - Fondo">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="60%&lt;FC&lt;70%">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label prefWidth="156.0" text="Z3 - Tempo">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="70%&lt;FC&lt;80%">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label prefWidth="156.0" text="Z4 - Umbral">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="80%&lt;FC&lt;90%">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label prefWidth="156.0" text="Z5 - Anaerobico">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="90%&lt;FC&lt;100%">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <PieChart fx:id="pieChart" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="586.0" prefWidth="595.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="cargar" mnemonicParsing="false" onAction="#cargarAction" text="Cargar" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="cerrar" mnemonicParsing="false" onAction="#cerrarAction" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+                  <MenuItem fx:id="cambiaEje" mnemonicParsing="false" onAction="#cambiarEjeAction" text="Cambiar gráfica entre Tiempo/Distancia" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Información">
+            <items>
+              <MenuItem fx:id="infor" mnemonicParsing="false" onAction="#infoAction" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" style="-fx-background-color: LIGHTGREY;">
+         <items>
+            <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT">
+               <children>
+                  <Label fx:id="status" text="Label">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="progreso" prefWidth="200.0" progress="0.0" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+   </bottom>
+</BorderPane>
