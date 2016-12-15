@@ -1,0 +1,99 @@
+Memoria Practica 1
+Realizado por:
+-Dols Dart, Josep Vicent
+-Cañadas Vacas, Cristian
+-Coleto Muñoz, Miguel
+
+####################################################
+EJERCICIO DEL BOLETÍN
+####################################################
+
+Hechos iniciales:
+-Tamaño de cuadricula-> [Eje X:5 (del 0 al 4), Eje Y:4 (del 0 al 3)]
+-Posición del almacén-> [Eje X:1 ,Eje Y:1]
+-Posición de las farolas-> Farola 1, [Eje X:2, Eje Y:0], 3 bombillas fundidas
+			   Farola 2, [Eje X:4, Eje Y:0], 2 bombillas fundidas
+			   Farola 3, [Eje X:3, Eje Y:2], 2 bombillas fundidas
+-Posición inicial del robot-> [Eje X:0, Eje Y:1]
+-Profundidad máxima-> 25
+
+Ejecución en profundidad:
+====================================================
+Solución encontrada en el nivel 25
+Numero de nodos expandidos: 8107
+Hecho final: <Fact-2844>
+
+-La solución se encuentra en el nivel 25, esto se debe al tipo de búsqueda, ya que
+en este caso, buscará primero desde la primera rama, en los nodos de profundidad 
+máxima, donde es probable que haya una solución que no sea la optima.
+
+Ejecución en anchura:
+====================================================
+Solución encontrada en el nivel 21
+Numero de nodos expandidos: 9392
+Hecho final: <Fact-3247>
+
+-La solución se encuentra en el nivel que se esperaba según el boletín de practicas, 
+puesto que en este caso, se encontrará la solución con el nivel mínimo.
+
+Ejecución con heurística:
+====================================================
+Solución encontrada en el nivel 21
+Numero de nodos expandidos: 10116
+Hecho final: <Fact-3799>
+
+-La solución se encuentra en el mismo nivel que mediante la busqueda en anchura, lo que
+significa que es la solucion optima.
+
+####################################################
+EJERCICIO ALTERNATIVO
+####################################################
+
+Hechos iniciales:
+-Tamaño de cuadricula-> [Eje X:6 (del 0 al 5), Eje Y:5 (del 0 al 4)]
+-Posición del almacén-> [Eje X:3 ,Eje Y:3]
+-Posición de las farolas-> Farola 1, [Eje X:0, Eje Y:0], 3 bombillas fundidas
+			   Farola 2, [Eje X:4, Eje Y:0], 2 bombillas fundidas
+			   Farola 3, [Eje X:5, Eje Y:2], 1 bombillas fundidas
+			   Farola 4, [Eje X:2, Eje Y:4], 2 bombillas fundidas
+-Posición inicial del robot-> [Eje X:0, Eje Y:2]
+-Profundidad máxima-> 35
+
+Ejecución en profundidad:
+====================================================
+Solución encontrada en el nivel 35
+Numero de nodos expandidos: 42299
+Hecho final: <Fact-13711>
+
+-Al igual que ocurre con el ejercicio anterior, la búsqueda en profundidad no 
+encuentra la solución optima, ya que la va buscando por los niveles inferiores.
+
+Ejecución en anchura:
+====================================================
+Solución encontrada en el nivel 31
+Numero de nodos expandidos: 48991
+Hecho final: <Fact-15770>
+
+-En este caso, la solución se encuentra en el nivel 31, al usar la búsqueda
+en anchura, se confía en que esta solución es la optima.
+
+Ejecución con heurística:
+====================================================
+Solución encontrada en el nivel 31
+Numero de nodos expandidos: 10812
+Hecho final: <Fact-3548>
+
+-En este caso se puede comprobar que el nivel de la solución es el mismo que en
+la busqueda en anchura, por lo que la solución es la correcta, y además se puede
+apreciar que el numero de nodos expandidos es considerablemente menor que en la
+busqueda con anchura.
+
+
+Función heuristica:
+#####################################################
+En cuanto a la heuristica utilizada para este ejercicio, se sigue un modelo basado
+en las distancias de Manhattan para comprobar el camino optimo, este modelo cumple
+que h(n)<=h*(n), por lo que se considera admisible. Con esto, se englobaria esta
+función dentro de las del tipo A*, ya que tambien es consistente, puesto que el 
+valor heurisitico de los nodos de nivel inferior es siempre mayor que el de sus
+predecesores.
