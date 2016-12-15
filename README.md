@@ -7,3 +7,5 @@ Actualmente, la lista de asignaturas que se encuentran en el repositorio son:
  * EDA
  * FSO
  * IPC
+ * LTP
+ * PRG
