@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="534.0" prefWidth="437.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controladores.PresupuestoFinalController">
+   <top>
+      <HBox prefHeight="133.0" prefWidth="437.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../configuradorpc/create_thumb.png" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="200.0" prefWidth="243.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%label.Nombre">
+                     <padding>
+                        <Insets top="30.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nombre" text="Label">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="60.0" text="%label.Subtotal">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="subtotal" text="Label">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="60.0" text="%label.Iva">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="iva" text="Label">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox minHeight="-Infinity" prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="60.0" text="%label.Total">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="total" text="Label">
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tabla" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="285.0" prefWidth="440.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tablaComponente" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="200.0" text="%tablaCol.Componente" />
+          <TableColumn fx:id="tablaPrecio" maxWidth="-1.0" minWidth="75.0" prefWidth="75.0" resizable="false" text="%tablaCol.Precio" />
+            <TableColumn fx:id="tablaCantidad" maxWidth="-1.0" minWidth="70.0" prefWidth="70.0" resizable="false" text="%tablaCol.Cantidad" />
+            <TableColumn fx:id="tablaTotal" maxWidth="1.7976931348623157E308" minWidth="70.0" prefWidth="70.0" resizable="false" text="%tablaCol.Total" />
+        </columns>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="25.0" prefWidth="437.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="fecha" text="Label">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="%label.Validez">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
