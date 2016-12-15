@@ -1,0 +1,22 @@
+> var path = require('path');
+> path.normalize('/a/.///b/d/../c/')
+'/a/b/c/'
+
+> var path = require('path');
+> var url = '/index.html';
+> path.join(process.cwd(), 'static', url);
+'/Users/Josep/static/index.html'
+
+> var path = require('path');
+> var a = '/a/b/c.html'
+> path.basename(a)
+'c.html'
+> path.extname(a)
+'.html'
+> path.dirname(a)
+'/a/b'
+
+> var path = require('path');
+> path.exists('/etc', function(exists){
+	console.log("Does the file exist?", exists)})
+> Does the file exist? true
