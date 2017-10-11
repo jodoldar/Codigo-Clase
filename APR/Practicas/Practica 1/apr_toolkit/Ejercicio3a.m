@@ -2,10 +2,6 @@ importdata('./data/mini/trSep.dat',' ',4);
 trSep = ans.data;
 importdata('./data/mini/trSeplabels.dat',' ',4);
 trSeplabels = ans.data;
-importdata("./data/mini/tr.dat",' ',4);
-tr = ans.data;
-importdata("./data/mini/trlabels.dat",' ',4);
-trlabels = ans.data;
 
 axis([0 7 0 7]);
 hold on
@@ -21,8 +17,8 @@ fprintf("Vectores soporte: \n");
 disp(full(res.SVs));
 
 alfa = res.sv_coef;
-clase = trlabels(res.sv_indices,1);
-equis = tr(res.sv_indices,:);
+clase = trSeplabels(res.sv_indices,1);
+equis = trSep(res.sv_indices,:);
 mult = alfa.*equis;
 sigma = sum(mult);
 sigma0  = clase(1)-sigma*equis(1,:)';
