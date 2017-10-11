@@ -6,8 +6,8 @@ C = 1000;
 axis([0 7 0 7]);
 
 hold on
-scatter(tr(trlabels==1,1),tr(trlabels==1,2),'o');
-scatter(tr(trlabels==2,1),tr(trlabels==2,2),'s');
+scatter(tr(trlabels==1,1),tr(trlabels==1,2),'ob','filled');
+scatter(tr(trlabels==2,1),tr(trlabels==2,2),'sg','filled');
 
 input = sprintf('-t 0 -c %d',C);
 res=svmtrain(trlabels,tr,input);
@@ -56,18 +56,18 @@ alfa2 = alfa(alfaPrima>0,:);
 val2 = (sigma*equis2'+sigma0);
 val3 = abs(round(val2,2));
 equisErr = equis2(val3~=1,:);
-scatter(equisErr(:,1),equisErr(:,2),200,'x');
+scatter(equisErr(:,1),equisErr(:,2),200,'xr');
 
 nAlfa = abs(alfa);
 equis3 = equis(alfaPrima<=0,:);
 alfa3 = alfa(alfaPrima<=0,:);
 val0 = (sigma*equis3'+sigma0)-1;
-val1 = ((-1*val1).*nAlfa')./nAlfa';
+val1 = ((-1*val0).*abs(alfa3'))./abs(alfa3)';
 val2 = abs(round(val1,2));
 equisErr = equis3(val2>1,:);
-scatter(equisErr(:,1),equisErr(:,2),200,'x');
+scatter(equisErr(:,1),equisErr(:,2),200,'xr');
 hold off
 
-val2 = (sigma*equis2'+sigma0);
-val1 = val0-1;
-cedillas = ((-1*val1).*nAlfa')./nAlfa';
+%val2 = (sigma*equis2'+sigma0);
+%val1 = val0-1;
+%cedillas = ((-1*val1).*nAlfa')./nAlfa';
