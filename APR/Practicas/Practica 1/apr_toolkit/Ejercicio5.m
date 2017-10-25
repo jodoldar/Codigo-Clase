@@ -1,10 +1,10 @@
-importdata("./data/spam/tr.dat",' ',4);
+importdata("./data/usps/tr.dat",' ',4);
 tr = ans.data;
-importdata("./data/spam/trlabels.dat",' ',4);
+importdata("./data/usps/trlabels.dat",' ',4);
 trlabels = ans.data;
-importdata("./data/spam/ts.dat",' ',4);
+importdata("./data/usps/ts.dat",' ',4);
 ts = ans.data;
-importdata("./data/spam/tslabels.dat",' ',4);
+importdata("./data/usps/tslabels.dat",' ',4);
 tslabels = ans.data;
 
 L = size(ts,1);
@@ -13,9 +13,9 @@ L = size(ts,1);
 t = 1;
 C = 1000;
 axis([0 1000 0 0.35])
-set(gca,'xscale','log')
+set(gca,'xscale','log');
 hold on
-for j = 0:1:3
+for j= 0:1:3
     t = j;
     resMat = [];
     numbers = round(logspace(0,3,10));
