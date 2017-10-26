@@ -2,7 +2,7 @@
 
 # COMPLETAR PARA LA ENTREGA DE ESTA PRÁCTICA:
 # Fecha:
-# Alumno(s):
+# Alumno: Josep Dols
 
 from PIL import Image, ImageTk
 import tkinter
@@ -11,6 +11,7 @@ import numpy
 import sys
 import time
 import math
+import operator
 
 def compute_gradient(grad,img):
     """
@@ -39,6 +40,7 @@ def paint_seams(height,seam_paths,color_matrix,path_color=[0,0,0]):
     """
     You don't need to modify this function
     """
+    #print(height)
     for y in range(height):
         for path in seam_paths:
             color_matrix[y][path[y]] = path_color
@@ -47,7 +49,14 @@ def remove_seams(height,seam_paths, matrix):
     """
     COMPLETE
     """
-    pass
+    ##print("Llego aqui: remove seams")
+    for y in range(height):
+        for path in seam_paths:
+#            if len(matrix[y]) <= path[y]:
+#                path[y] = len(matrix[y]) -1
+            matrix[y].pop(path[y])
+
+    #pass
 
 def dp_seam_carving_multi(grad,mat,N,pscore=0.8):
     """
@@ -62,6 +71,7 @@ def dp_seam_carving_multi(grad,mat,N,pscore=0.8):
     """
     width, height = len(grad[0]), len(grad)
     infty=1e99
+    columnas_restantes = removed_colums
     # first row deserves special treatment:
     mat[0][0]       = infty
     mat[0][width-1] = infty
@@ -72,8 +82,67 @@ def dp_seam_carving_multi(grad,mat,N,pscore=0.8):
         mat[y][0]       = infty
         mat[y][width-1] = infty
         # COMPLETE
+        for i in range(1,width-1):
+            mat[y][i] = grad[y][i] + min(mat[y-1][i-1],mat[y-1][i],mat[y-1][i+1])
+
     paths = []
-    # COMPLETE HERE
+
+    puntosInsertados = []
+    for i in range(height-2,-1,-1):
+        puntosInsertados.append([])
+
+    list_v =sorted ([(mat[-1][i], i) for i in range(width)])
+    list_v = list_v[:N]
+
+    auxList = sorted((y,x) for (x,y) in enumerate(mat[-1]))
+    bestN = auxList[:N]
+
+    pesoMin = 0
+    for punto in list_v:
+        if punto[1] >= width:
+            break
+        min_point = punto[1]
+        peso = 0
+        heSalido = 0
+        path = [min_point]
+        for i in range(height-2,-1,-1):
+            values = (mat[i-1][min_point-1],mat[i-1][min_point],mat[i-1][min_point+1])
+            min_point2, min_val = min(enumerate(values), key=operator.itemgetter(1))
+            peso = peso + min_val
+
+            if(min_point2==0):
+                min_point = min_point - 1
+            elif(min_point2==2):
+                 min_point = min_point +1
+
+            if(min_point in puntosInsertados[i]):
+                heSalido = 1
+                break
+            else:
+                puntosInsertados[i].append(min_point)
+                path.append(min_point)
+        if(len(paths)==0):
+            pesoMin = peso
+        if((heSalido==0) & ((peso/pesoMin)>pscore)):
+            path.reverse()
+            paths.append(path)
+
+#        auxSet = set()
+#        auxList = []
+#        if(mat[-1][auxList[i][1]]*pscore<=top_value):
+#            listaIn = path_from_min_point(mat,auxList[i][1])
+#            for j in range(height-1,-1,-1):
+#                if (listaIn[j] in puntosInsertados[j]):
+#                    break
+#            if (j==0):
+#                paths.append(listaIn)
+#                for k in range(len(puntosInsertados)):
+#                    puntosInsertados[k].append(listaIn[-k])
+#                #pathSet = pathSet.union(auxSet)
+#        else:
+#            break
+    paths = sorted(paths, key=lambda x: sum(x))
+    paths.reverse()
     return paths
 
 def matrix_to_color_image(color_matrix):
@@ -108,6 +177,7 @@ class MyTkApp():
         self.removed_colums = removed_colums
         self.max_number_seams = max_number_seams
         width, height = color_img.size
+        print("Width: ", width,", Height: ",height)
         height = min(720, height)
         self.root.geometry('%dx%d' % (width, height+64))
         self.canvas = tkinter.Canvas(self.root.master,width=width,height=height)

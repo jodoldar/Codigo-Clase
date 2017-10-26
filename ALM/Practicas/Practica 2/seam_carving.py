@@ -2,7 +2,7 @@
 
 # COMPLETAR PARA LA ENTREGA DE ESTA PRÁCTICA:
 # Fecha:
-# Alumno(s):
+# Alumno: Josep Dols
 
 from PIL import Image, ImageTk
 import tkinter
@@ -11,6 +11,7 @@ import numpy
 import sys
 import time
 import math
+import operator
 
 def compute_gradient(grad,img,path):
     """
@@ -24,6 +25,8 @@ def compute_gradient(grad,img,path):
 
     # MODIFY this function in order make it possible the incremental
     # computation of the gradient
+    #
+    #
 
     # first and last rows compute a different, simpler, gradient
     for y in (0, height-1): # just first and last rows
@@ -54,7 +57,9 @@ def dp_seam_carving(grad,mat):
     """
     dynamic programming version which finds just one path/seam and
     returns it
-
+    C(i,j) =
+    grad(i,j) si i=0
+    min{C(i-1,j-1),C(i-1,j),C(i-1,j+1)} + Grad(i,j) si i>0
     first and last columns are never considered in this algorithm
     """
     width, height = len(grad[0]), len(grad)
@@ -64,24 +69,39 @@ def dp_seam_carving(grad,mat):
     mat[0][width-1] = infty
     for x in range(1,width-1):
         mat[0][x] = grad[0][x]
+
     # the rest of rows
     for y in range(1,height):
         mat[y][0]       = infty
         mat[y][width-1] = infty
         # COMPLETE
-    # min_val, min_point = COMPLETE
-    # retrieve the best path from min_point
-    # path = [min_point]
-    # COMPLETE HERE
-    # path.reverse()
+        for i in range(1,width-1):
+            mat[y][i] = grad[y][i] + min(mat[y-1][i-1],mat[y-1][i],mat[y-1][i+1])
 
+    #print((mat[0]))
+    min_point, min_val = min(enumerate(mat[-1]), key=operator.itemgetter(1))
+    # retrieve the best path from min_point
+    path = [min_point]
+    for i in range(height,1,-1):
+        values = (mat[i-1][min_point-1],mat[i-1][min_point],mat[i-1][min_point+1])
+        min_point2, min_val = min(enumerate(values), key=operator.itemgetter(1))
+        if(min_point2==0):
+            path.append(min_point-1)
+            min_point = min_point - 1
+        elif(min_point2==1):
+            path.append(min_point)
+        else:
+            path.append(min_point+1)
+            min_point = min_point +1
+        
+    path.reverse()
     # THIS CODE SHOULD BE REMOVED TO FINISH THE EXERCISE:
-    x = random.randint(0,width-1)
-    path = []
-    for y in range(height):
-      delta = random.randint(-1 if x > 0 else 0, 1 if x <width-1 else 0)
-      x = x + delta
-      path.append(x)
+    #x = random.randint(0,width-1)
+    #path = []
+    #for y in range(height):
+    #  delta = random.randint(-1 if x > 0 else 0, 1 if x <width-1 else 0)
+    #  x = x + delta
+    #  path.append(x)
     # END OF CODE TO BE REMOVED
     return path
 
