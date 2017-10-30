@@ -5,7 +5,7 @@
 #include <string.h>
 #include "header.h"
 
-int verbosidad=FALSE;               /* Flag para saber si se desea una traza */
+extern int verbosidad=FALSE;               /* Flag para saber si se desea una traza */
 int numErrores=0;                   /* Contador del numero de errores        */
 /*****************************************************************************/
 void yyerror(const char * msg)
@@ -27,7 +27,7 @@ int main (int argc, char **argv)
     if ((yyin = fopen (argv[argc], "r")) == NULL)
       fprintf (stderr, "Fichero no valido %s\n", argv[argc]);      
     else {        
-      if (verbosidad == TRUE) fprintf(stdout,"%3d.- ", yylineno);
+      if (verbosidad == TRUE) fprintf(stdout,"%3d.- %s\n", yylineno,argv[argc]);
       yyparse ();
       if (numErrores > 0) 
         fprintf(stdout,"\nNumero de errores:      %d\n", numErrores);

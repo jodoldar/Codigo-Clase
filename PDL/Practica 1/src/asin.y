@@ -124,14 +124,3 @@ operadorIncremento: INCMAS_
 	| INCMIN_;
 
 %%
-
-/*void yyerror(char* msg){
-	numErrores++;
-	fprintf(stdout,"\nError at line %d: %s\n",yylineno,msg);
-}
-*/
-/*int main(int argc, char **argv){
-	if((yyin=fopen(argv[1],"r"))==NULL)
-		fprintf(stderr, "Fichero no valido \%s", argv[1]);
-	yyparse();
-}*/
