@@ -1,9 +1,22 @@
 %{
 	#include <stdio.h>
+	#include "header.h"
+	#include "libtds.h"
+
+	extern int dval;
 	extern int yylineno;
 	extern FILE *yyin;
+
 	int numErrores;
 %}
+
+%union{
+	char* ident;
+	int cent;
+}
+
+%type <cent> tipoSimple
+%type <ident> id_
 
 %token SPACE_ TAB_ CRLF_ OPENPAR_ CLOSEPAR_ COMMADOT_ OPENCOR_ CLOSECOR_ OPENLLAV_ CLOSELLAV_
 %token OPASIG_ OPASIGADD_ OPASIGSUB_ OPASIGMUL_ OPASIGDIV_
@@ -14,9 +27,9 @@
 %token OPMULT_ OPDIV_ OPRESTO_
 %token UNMAS_ UNMIN_ UNNOT_
 %token INCMAS_ INCMIN_
-%token cte_
+%token <cent> cte_
 %token id_
-%token int_ bool_
+%token <cent> int_ bool_
 %token read_ print_
 %token if_ elseif_ else_
 %token while_ do_
@@ -33,7 +46,18 @@ sentencia: declaracion
 	| instruccion;
 
 declaracion: tipoSimple id_ COMMADOT_
-	| tipoSimple id_ OPENCOR_ cte_ CLOSECOR_ COMMADOT_;
+	| tipoSimple id_ OPENCOR_ cte_ CLOSECOR_ COMMADOT_ { 	int numelem = $4; int refe;
+															if($4<=0){
+																yyerror("Talla inapropiada del array");
+																numelem = 0;
+															}
+															refe = insertaTDArray($1,numelem);
+															if(!insertarTDS($2, T_ARRAY, dval, refe)){
+																yyerror("Identificador repetido");
+															}else{
+																dval+=numelem * TALLA_TIPO_SIMPLE;
+															}
+														};
 
 tipoSimple: int_
 	| bool_;
@@ -124,14 +148,3 @@ operadorIncremento: INCMAS_
 	| INCMIN_;
 
 %%
-
-/*void yyerror(char* msg){
-	numErrores++;
-	fprintf(stdout,"\nError at line %d: %s\n",yylineno,msg);
-}
-*/
-/*int main(int argc, char **argv){
-	if((yyin=fopen(argv[1],"r"))==NULL)
-		fprintf(stderr, "Fichero no valido \%s", argv[1]);
-	yyparse();
-}*/

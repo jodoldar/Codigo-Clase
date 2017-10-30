@@ -9,6 +9,8 @@
 /****************************************************** Constantes generales */
 #define TRUE  1
 #define FALSE 0
+
+#define TALLA_TIPO_SIMPLE 1
 /************************************* Variables externas definidas en el AL */
 extern FILE *yyin;
 extern int   yylineno;
