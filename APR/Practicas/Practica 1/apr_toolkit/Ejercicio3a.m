@@ -5,11 +5,11 @@ trSeplabels = ans.data;
 
 axis([0 7 0 7]);
 hold on
-scatter(trSep(trSeplabels==1,1),tr(trSeplabels==1,2),'x');
-scatter(trSep(trSeplabels==2,1),tr(trSeplabels==2,2),'s');
+scatter(trSep(trSeplabels==1,1),trSep(trSeplabels==1,2),'x');
+scatter(trSep(trSeplabels==2,1),trSep(trSeplabels==2,2),'s');
 %hold off
 
-res=svmtrain(trSeplabels,trSep,'-t 0 -c 100');
+res=svmtrain(trSeplabels,trSep,'-t 0 -c 1');
 
 fprintf("Multiplicadores de Lagrange: \n");
 disp(res.sv_coef);
@@ -27,7 +27,7 @@ disp(sigma);
 fprintf(" y umbral: ");
 disp(sigma0);
 fprintf("Margen: \n");
-disp(1/norm(sigma));
+disp(2/norm(sigma));
 
 m = -1*sigma(1)/sigma(2);
 b = -1*sigma0/sigma(2);

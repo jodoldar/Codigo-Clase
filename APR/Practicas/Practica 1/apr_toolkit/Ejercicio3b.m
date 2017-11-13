@@ -4,7 +4,7 @@ tr = ans.data;
 importdata("./data/mini/trlabels.dat",' ',4);
 trlabels = ans.data;
 
-C = 1000;
+C = 5;
 axis([0 7 0 7]);
 grid on
 hold on
@@ -34,6 +34,7 @@ fprintf(" y umbral: ");
 disp(sigma0);
 fprintf("Margen: \n");
 disp(1/norm(sigma));
+disp(2/norm(sigma));
 
 m = -1*sigma(1)/sigma(2);
 b = -1*sigma0/sigma(2);
