@@ -203,9 +203,10 @@ typedef union YYSTYPE
 {
 	char* ident;
 	int cent;
+	int tipo;
 }
 /* Line 193 of yacc.c.  */
-#line 209 "asin.c"
+#line 210 "asin.c"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
@@ -218,7 +219,7 @@ typedef union YYSTYPE
 
 
 /* Line 216 of yacc.c.  */
-#line 222 "asin.c"
+#line 223 "asin.c"
 
 #ifdef short
 # undef short
@@ -532,14 +533,14 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    40,    40,    42,    43,    45,    46,    48,    49,    62,
-      63,    65,    66,    67,    68,    69,    71,    72,    74,    75,
-      77,    78,    80,    82,    83,    85,    86,    88,    89,    90,
-      92,    93,    95,    96,    98,    99,   101,   102,   104,   105,
-     107,   108,   109,   111,   112,   113,   114,   115,   116,   117,
-     119,   120,   121,   122,   123,   125,   126,   128,   129,   131,
-     132,   133,   134,   136,   137,   139,   140,   141,   143,   144,
-     145,   147,   148
+       0,    41,    41,    43,    44,    46,    47,    49,    57,    71,
+      72,    75,    76,    77,    78,    79,    81,    82,    84,    85,
+      87,    88,    90,    92,    93,    95,    96,    98,    99,   113,
+     135,   136,   138,   139,   141,   142,   144,   145,   147,   148,
+     150,   151,   152,   154,   155,   156,   157,   158,   159,   160,
+     162,   163,   164,   165,   166,   168,   169,   171,   172,   174,
+     175,   176,   177,   179,   180,   182,   183,   184,   186,   187,
+     188,   190,   191
 };
 #endif
 
@@ -1546,25 +1547,91 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-        case 8:
+        case 7:
 #line 49 "./src/asin.y"
+    {
+														    if(!insertarTDS((yyvsp[(2) - (3)].ident), (yyvsp[(1) - (3)].tipo), dval, 1)){
+														        yyerror("Identificador repetido");
+														    }else{
+														        dval+=TALLA_TIPO_SIMPLE;
+														    }
+														    mostrarTDS();
+                                                        ;}
+    break;
+
+  case 8:
+#line 57 "./src/asin.y"
     { 	int numelem = (yyvsp[(4) - (6)].cent); int refe;
 															if((yyvsp[(4) - (6)].cent)<=0){
 																yyerror("Talla inapropiada del array");
 																numelem = 0;
 															}
-															refe = insertaTDArray((yyvsp[(1) - (6)].cent),numelem);
+															refe = insertaTDArray((yyvsp[(1) - (6)].tipo),numelem);
 															if(!insertarTDS((yyvsp[(2) - (6)].ident), T_ARRAY, dval, refe)){
 																yyerror("Identificador repetido");
 															}else{
 																dval+=numelem * TALLA_TIPO_SIMPLE;
 															}
+															mostrarTDS();
 														;}
+    break;
+
+  case 9:
+#line 71 "./src/asin.y"
+    {(yyval.tipo) = T_ENTERO;;}
+    break;
+
+  case 10:
+#line 72 "./src/asin.y"
+    {(yyval.tipo) = T_LOGICO;;}
+    break;
+
+  case 28:
+#line 99 "./src/asin.y"
+    {	
+																			char aux[1024];
+																			SIMB sim = obtenerTDS((yyvsp[(1) - (3)].ident)); (yyval.tipo) = T_ERROR;
+																			if(sim.tipo == T_ERROR){
+																				yyerror("Objeto no declarado");
+																			}else{ 
+																				if(!((sim.tipo == (yyvsp[(3) - (3)].tipo))&&((yyvsp[(3) - (3)].tipo) == T_ENTERO || (yyvsp[(3) - (3)].tipo) == T_LOGICO))){
+																					sprintf(aux,"El identificador tiene que ser de tipo %d", sim.tipo);
+																					yyerror(aux);
+																				}else{
+																					(yyval.tipo) = sim.tipo;
+																				}
+																			}
+																		;}
+    break;
+
+  case 29:
+#line 113 "./src/asin.y"
+    {
+																			SIMB sim = obtenerTDS((yyvsp[(1) - (6)].ident)); (yyval.tipo) = T_ERROR;
+																			if(sim.tipo == T_ERROR){
+																				yyerror("Objeto no declarado");
+																			}else{
+																				if(sim.tipo != T_ARRAY){
+																					yyerror("El identificador tiene que ser de tipo Array");
+																				}else{
+																					DIM dim = obtenerInfoArray(sim.ref);
+																					if(!((dim.telem == (yyvsp[(6) - (6)].tipo))&&((yyvsp[(6) - (6)].tipo) == T_ENTERO || (yyvsp[(6) - (6)].tipo) == T_LOGICO))){
+																						yyerror("Error de tipos en la asignación");
+																					}else{ 
+																						if((yyvsp[(3) - (6)].tipo)!=T_ENTERO){
+																							yyerror("El indice del array tiene que ser un entero");
+																						}else{
+																							(yyval.tipo) = sim.tipo;
+																						}
+																					}
+																				}
+																			}
+																		;}
     break;
 
 
 /* Line 1267 of yacc.c.  */
-#line 1568 "asin.c"
+#line 1635 "asin.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1778,6 +1845,6 @@ yyreturn:
 }
 
 
-#line 150 "./src/asin.y"
+#line 193 "./src/asin.y"
 
 

@@ -13,10 +13,11 @@
 %union{
 	char* ident;
 	int cent;
+	int tipo;
 }
 
-%type <cent> tipoSimple
-%type <ident> id_
+%type <tipo> tipoSimple
+%type <tipo> expresion
 
 %token SPACE_ TAB_ CRLF_ OPENPAR_ CLOSEPAR_ COMMADOT_ OPENCOR_ CLOSECOR_ OPENLLAV_ CLOSELLAV_
 %token OPASIG_ OPASIGADD_ OPASIGSUB_ OPASIGMUL_ OPASIGDIV_
@@ -28,7 +29,7 @@
 %token UNMAS_ UNMIN_ UNNOT_
 %token INCMAS_ INCMIN_
 %token <cent> cte_
-%token id_
+%token <ident> id_
 %token <cent> int_ bool_
 %token read_ print_
 %token if_ elseif_ else_
@@ -45,8 +46,15 @@ secuenciaSentencias: sentencia
 sentencia: declaracion
 	| instruccion;
 
-declaracion: tipoSimple id_ COMMADOT_
-	| tipoSimple id_ OPENCOR_ cte_ CLOSECOR_ COMMADOT_ { 	int numelem = $4; int refe;
+declaracion: tipoSimple id_ COMMADOT_                   {
+														    if(!insertarTDS($2, $1, dval, 1)){
+														        yyerror("Identificador repetido");
+														    }else{
+														        dval+=TALLA_TIPO_SIMPLE;
+														    }
+														    mostrarTDS();
+                                                        }
+	| tipoSimple id_ OPENCOR_ cte_ CLOSECOR_ COMMADOT_  { 	int numelem = $4; int refe;
 															if($4<=0){
 																yyerror("Talla inapropiada del array");
 																numelem = 0;
@@ -57,10 +65,12 @@ declaracion: tipoSimple id_ COMMADOT_
 															}else{
 																dval+=numelem * TALLA_TIPO_SIMPLE;
 															}
+															mostrarTDS();
 														};
 
-tipoSimple: int_
-	| bool_;
+tipoSimple: int_ {$$ = T_ENTERO;}
+	| bool_	{$$ = T_LOGICO;};
+
 
 instruccion: OPENLLAV_ listaInstrucciones CLOSELLAV_
 	| instruccionEntradaSalida
@@ -85,9 +95,42 @@ restoIf: elseif_ OPENPAR_ expresion CLOSEPAR_ instruccion restoIf
 instruccionIteracion: while_ OPENPAR_ expresion CLOSEPAR_ instruccion
 	| do_ instruccion while_ OPENPAR_ expresion CLOSEPAR_;
 
-expresion: expresionLogica
-	| id_ operadorAsignacion expresion
-	| id_ OPENCOR_ expresion CLOSECOR_ operadorAsignacion expresion;
+expresion: expresionLogica												
+	| id_ operadorAsignacion expresion									{	
+																			char aux[1024];
+																			SIMB sim = obtenerTDS($1); $$ = T_ERROR;
+																			if(sim.tipo == T_ERROR){
+																				yyerror("Objeto no declarado");
+																			}else{ 
+																				if(!((sim.tipo == $3)&&($3 == T_ENTERO || $3 == T_LOGICO))){
+																					sprintf(aux,"El identificador tiene que ser de tipo %d", sim.tipo);
+																					yyerror(aux);
+																				}else{
+																					$$ = sim.tipo;
+																				}
+																			}
+																		}
+	| id_ OPENCOR_ expresion CLOSECOR_ operadorAsignacion expresion 	{
+																			SIMB sim = obtenerTDS($1); $$ = T_ERROR;
+																			if(sim.tipo == T_ERROR){
+																				yyerror("Objeto no declarado");
+																			}else{
+																				if(sim.tipo != T_ARRAY){
+																					yyerror("El identificador tiene que ser de tipo Array");
+																				}else{
+																					DIM dim = obtenerInfoArray(sim.ref);
+																					if(!((dim.telem == $6)&&($6 == T_ENTERO || $6 == T_LOGICO))){
+																						yyerror("Error de tipos en la asignación");
+																					}else{ 
+																						if($3!=T_ENTERO){
+																							yyerror("El indice del array tiene que ser un entero");
+																						}else{
+																							$$ = sim.tipo;
+																						}
+																					}
+																				}
+																			}
+																		};
 
 expresionLogica: expresionIgualdad
 	| expresionLogica operadorLogico expresionIgualdad;

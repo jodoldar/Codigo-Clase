@@ -144,9 +144,10 @@ typedef union YYSTYPE
 {
 	char* ident;
 	int cent;
+	int tipo;
 }
 /* Line 1529 of yacc.c.  */
-#line 150 "asin.h"
+#line 151 "asin.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1

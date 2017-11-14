@@ -530,12 +530,13 @@ char *yytext;
 #line 2 "./src/alex.l"
 #include <stdio.h>
 #include <asin.h>
+#include "header.h"
 
 extern FILE *yyin;
 extern int verbosidad;
 
 void visualizar(char* texto);
-#line 539 "alex.c"
+#line 540 "alex.c"
 
 #define INITIAL 0
 
@@ -717,10 +718,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 23 "./src/alex.l"
+#line 24 "./src/alex.l"
 
 
-#line 724 "alex.c"
+#line 725 "alex.c"
 
 	if ( !(yy_init) )
 		{
@@ -815,231 +816,231 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 25 "./src/alex.l"
+#line 26 "./src/alex.l"
 {}
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 26 "./src/alex.l"
+#line 27 "./src/alex.l"
 {}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 27 "./src/alex.l"
+#line 28 "./src/alex.l"
 {if(verbosidad)visualizar("int"); return(int_);}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 28 "./src/alex.l"
+#line 29 "./src/alex.l"
 {if(verbosidad)visualizar("bool"); return(bool_);}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 29 "./src/alex.l"
+#line 30 "./src/alex.l"
 {if(verbosidad)visualizar("if"); return(if_);}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 30 "./src/alex.l"
+#line 31 "./src/alex.l"
 {if(verbosidad)visualizar("else"); return(else_);}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 31 "./src/alex.l"
+#line 32 "./src/alex.l"
 {if(verbosidad)visualizar("elseif"); return(elseif_);}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 32 "./src/alex.l"
+#line 33 "./src/alex.l"
 {if(verbosidad)visualizar("while"); return(while_);}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 33 "./src/alex.l"
+#line 34 "./src/alex.l"
 {if(verbosidad)visualizar("do"); return(do_);}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 34 "./src/alex.l"
+#line 35 "./src/alex.l"
 {if(verbosidad)visualizar("{"); return(OPENLLAV_);}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 35 "./src/alex.l"
+#line 36 "./src/alex.l"
 {if(verbosidad)visualizar("}"); return(CLOSELLAV_);}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 36 "./src/alex.l"
+#line 37 "./src/alex.l"
 {if(verbosidad)visualizar("="); return(OPASIG_);}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 37 "./src/alex.l"
+#line 38 "./src/alex.l"
 {if(verbosidad)visualizar("*="); return(OPASIGMUL_);}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 38 "./src/alex.l"
+#line 39 "./src/alex.l"
 {if(verbosidad)visualizar("/="); return(OPASIGDIV_);}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 39 "./src/alex.l"
+#line 40 "./src/alex.l"
 {if(verbosidad)visualizar("-="); return(OPASIGSUB_);}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 40 "./src/alex.l"
+#line 41 "./src/alex.l"
 {if(verbosidad)visualizar("+="); return(OPASIGADD_);}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 41 "./src/alex.l"
+#line 42 "./src/alex.l"
 {if(verbosidad)visualizar("+"); return(OPMAS_);}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 42 "./src/alex.l"
+#line 43 "./src/alex.l"
 {if(verbosidad)visualizar("-"); return(OPRES_);}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 43 "./src/alex.l"
+#line 44 "./src/alex.l"
 {if(verbosidad)visualizar("*"); return(OPMULT_);}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 44 "./src/alex.l"
+#line 45 "./src/alex.l"
 {if(verbosidad)visualizar("/"); return(OPDIV_);}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 45 "./src/alex.l"
+#line 46 "./src/alex.l"
 {if(verbosidad)visualizar("%"); return(OPRESTO_);}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 46 "./src/alex.l"
+#line 47 "./src/alex.l"
 {if(verbosidad)visualizar("++"); return(INCMAS_);}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 47 "./src/alex.l"
+#line 48 "./src/alex.l"
 {if(verbosidad)visualizar("--"); return(INCMIN_);}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 48 "./src/alex.l"
+#line 49 "./src/alex.l"
 {if(verbosidad)visualizar("=="); return(EQEQ_);}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 49 "./src/alex.l"
+#line 50 "./src/alex.l"
 {if(verbosidad)visualizar(">="); return(RELBIGEQ_);}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 50 "./src/alex.l"
+#line 51 "./src/alex.l"
 {if(verbosidad)visualizar("<="); return(RELSMALLEQ_);}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 51 "./src/alex.l"
+#line 52 "./src/alex.l"
 {if(verbosidad)visualizar("!="); return(EQDIFF_);}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 52 "./src/alex.l"
+#line 53 "./src/alex.l"
 {if(verbosidad)visualizar(">"); return(RELBIG_);}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 53 "./src/alex.l"
+#line 54 "./src/alex.l"
 {if(verbosidad)visualizar("<"); return(RELSMALL_);}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 54 "./src/alex.l"
+#line 55 "./src/alex.l"
 {if(verbosidad)visualizar("&&"); return(LOGAND_);}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 55 "./src/alex.l"
+#line 56 "./src/alex.l"
 {if(verbosidad)visualizar("||"); return(LOGOR_);}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 56 "./src/alex.l"
+#line 57 "./src/alex.l"
 {if(verbosidad)visualizar("!"); return(UNNOT_);}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 57 "./src/alex.l"
+#line 58 "./src/alex.l"
 {if(verbosidad)visualizar("TRUE"); return(TRUE_);}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 58 "./src/alex.l"
+#line 59 "./src/alex.l"
 {if(verbosidad)visualizar("FALSE"); return(FALSE_);}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 59 "./src/alex.l"
+#line 60 "./src/alex.l"
 {if(verbosidad)visualizar("("); return(OPENPAR_);}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 60 "./src/alex.l"
+#line 61 "./src/alex.l"
 {if(verbosidad)visualizar(")"); return(CLOSEPAR_);}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 61 "./src/alex.l"
+#line 62 "./src/alex.l"
 {if(verbosidad)visualizar("]"); return(CLOSECOR_);}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 62 "./src/alex.l"
+#line 63 "./src/alex.l"
 {if(verbosidad)visualizar("["); return(OPENCOR_);}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 63 "./src/alex.l"
+#line 64 "./src/alex.l"
 {if(verbosidad)visualizar(";"); return(COMMADOT_);}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 64 "./src/alex.l"
+#line 65 "./src/alex.l"
 {if(verbosidad)visualizar("read"); return(read_);}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 65 "./src/alex.l"
+#line 66 "./src/alex.l"
 {if(verbosidad)visualizar("print"); return(print_);}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 66 "./src/alex.l"
-{if(verbosidad)visualizar("id"); return(id_);}
+#line 67 "./src/alex.l"
+{yylval.ident = (char *)malloc(sizeof(char)*yyleng);strcpy(yylval.ident,yytext);if(verbosidad) ECHO; return(id_);}
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 67 "./src/alex.l"
-{if(verbosidad)visualizar("cte"); return(cte_);}
+#line 68 "./src/alex.l"
+{yylval.cent = atoi(yytext); if(verbosidad) ECHO; return(cte_);}
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 68 "./src/alex.l"
+#line 69 "./src/alex.l"
 {printf("Lex err in line %s \n",yylineno);}
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 69 "./src/alex.l"
+#line 70 "./src/alex.l"
 ECHO;
 	YY_BREAK
-#line 1043 "alex.c"
+#line 1044 "alex.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2048,7 +2049,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 69 "./src/alex.l"
+#line 70 "./src/alex.l"
 
 
 
