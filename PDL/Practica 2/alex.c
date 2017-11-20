@@ -1033,7 +1033,7 @@ YY_RULE_SETUP
 case 44:
 YY_RULE_SETUP
 #line 69 "./src/alex.l"
-{printf("Lex err in line %s \n",yylineno);}
+{printf("Lex err in line %d \n",yylineno);}
 	YY_BREAK
 case 45:
 YY_RULE_SETUP

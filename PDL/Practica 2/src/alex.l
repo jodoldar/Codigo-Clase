@@ -66,7 +66,7 @@ read              {if(verbosidad)visualizar("read"); return(read_);}
 print             {if(verbosidad)visualizar("print"); return(print_);}
 {id}              {yylval.ident = (char *)malloc(sizeof(char)*yyleng);strcpy(yylval.ident,yytext);if(verbosidad) ECHO; return(id_);}
 {cte}             {yylval.cent = atoi(yytext); if(verbosidad) ECHO; return(cte_);}
-.                 {printf("Lex err in line %s \n",yylineno);}
+.                 {printf("Lex err in line %d \n",yylineno);}
 %%
 
 void visualizar(char* texto){
