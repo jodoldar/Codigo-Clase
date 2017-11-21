@@ -4,7 +4,7 @@ tr = ans.data;
 importdata("./data/mini/trlabels.dat",' ',4);
 trlabels = ans.data;
 
-C = 5;
+C = 1000;
 axis([0 7 0 7]);
 grid on
 hold on
