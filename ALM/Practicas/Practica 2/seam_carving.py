@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 # COMPLETAR PARA LA ENTREGA DE ESTA PRÁCTICA:
-# Fecha:
-# Alumno: Josep Dols
+# Fecha: 27/10/17
+# Alumno: Josep Vicent Dols
 
 from PIL import Image, ImageTk
 import tkinter

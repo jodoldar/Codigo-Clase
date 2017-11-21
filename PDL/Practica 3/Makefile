@@ -17,10 +17,10 @@ asin.o:	asin.c
 alex.o:	alex.c asin.c
 	gcc -c alex.c -I./include $(CC_OPTIONS)
 asin.c:	./src/asin.y
-	bison -oasin.c -d ./src/asin.y
+	bison -o asin.c -d ./src/asin.y
 	mv ./asin.h ./include	
 alex.c:	./src/alex.l 
-	flex -oalex.c ./src/alex.l
+	flex -o alex.c ./src/alex.l
 
 clean:
 	rm -f ./alex.c ./asin.c ./include/asin.h

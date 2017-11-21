@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 # COMPLETAR PARA LA ENTREGA DE ESTA PRÁCTICA:
-# Fecha:
-# Alumno: Josep Dols
+# Fecha: 27/10/17
+# Alumno: Josep Vicent Dols
 
 from PIL import Image, ImageTk
 import tkinter
@@ -52,8 +52,6 @@ def remove_seams(height,seam_paths, matrix):
     ##print("Llego aqui: remove seams")
     for y in range(height):
         for path in seam_paths:
-#            if len(matrix[y]) <= path[y]:
-#                path[y] = len(matrix[y]) -1
             matrix[y].pop(path[y])
 
     #pass

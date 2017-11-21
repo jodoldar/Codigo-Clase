@@ -172,7 +172,7 @@
 	#include "header.h"
 	#include "libtds.h"
 
-	extern int dval;
+	extern int dvar;
 	extern int yylineno;
 	extern FILE *yyin;
 
@@ -1558,10 +1558,10 @@ yyreduce:
         case 7:
 #line 50 "./src/asin.y"
     {	
-														    if(!insertarTDS((yyvsp[(2) - (3)].ident), (yyvsp[(1) - (3)].tipo), dval, 1)){
+														    if(!insertarTDS((yyvsp[(2) - (3)].ident), (yyvsp[(1) - (3)].tipo), dvar, 1)){
 														        yyerror("Identificador repetido");
 														    }else{
-														        dval+=TALLA_TIPO_SIMPLE;
+														        dvar+=TALLA_TIPO_SIMPLE;
 														    }
 														    mostrarTDS();
                                                         ;}
@@ -1575,10 +1575,10 @@ yyreduce:
 																numelem = 0;
 															}
 															refe = insertaTDArray((yyvsp[(1) - (6)].tipo),numelem);
-															if(!insertarTDS((yyvsp[(2) - (6)].ident), T_ARRAY, dval, refe)){
+															if(!insertarTDS((yyvsp[(2) - (6)].ident), T_ARRAY, dvar, refe)){
 																yyerror("Identificador repetido");
 															}else{
-																dval+=numelem * TALLA_TIPO_SIMPLE;
+																dvar+=numelem * TALLA_TIPO_SIMPLE;
 															}
 															mostrarTDS();
 														;}

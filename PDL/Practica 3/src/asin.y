@@ -3,7 +3,7 @@
 	#include "header.h"
 	#include "libtds.h"
 
-	extern int dval;
+	extern int dvar;
 	extern int yylineno;
 	extern FILE *yyin;
 
@@ -48,10 +48,10 @@ sentencia: declaracion
 	| instruccion;
 
 declaracion: tipoSimple id_ COMMADOT_                   {	
-														    if(!insertarTDS($2, $1, dval, 1)){
+														    if(!insertarTDS($2, $1, dvar, 1)){
 														        yyerror("Identificador repetido");
 														    }else{
-														        dval+=TALLA_TIPO_SIMPLE;
+														        dvar+=TALLA_TIPO_SIMPLE;
 														    }
 														    mostrarTDS();
                                                         }
@@ -61,10 +61,10 @@ declaracion: tipoSimple id_ COMMADOT_                   {
 																numelem = 0;
 															}
 															refe = insertaTDArray($1,numelem);
-															if(!insertarTDS($2, T_ARRAY, dval, refe)){
+															if(!insertarTDS($2, T_ARRAY, dvar, refe)){
 																yyerror("Identificador repetido");
 															}else{
-																dval+=numelem * TALLA_TIPO_SIMPLE;
+																dvar+=numelem * TALLA_TIPO_SIMPLE;
 															}
 															mostrarTDS();
 														};
