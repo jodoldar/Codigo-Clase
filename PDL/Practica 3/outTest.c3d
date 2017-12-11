@@ -1,0 +1,7 @@
+  0 ESUM      p: 32657  ,  p: 32657  ,  p:   1  
+  1 RESTO     p: 32657  ,  p: 32657  ,  p:   2  
+  2 EMULT     p:   1  ,  p:   2  ,  p:   3  
+  3 EDIVI     p:   3  ,  p: 32657  ,  p:   4  
+  4 EDIF      p:   4  ,  p: 32657  ,  p:   5  
+  5 EMULT     p:   0  ,  p:   5  ,  p: 32657  
+  6 FIN               ,          ,          

@@ -18,6 +18,14 @@ extern char *yytext;
 /********************* Variables externas definidas en el Programa Principal */
 extern int verbosidad;              /* Flag para saber si se desea una traza */
 extern int numErrores;              /* Contador del numero de errores        */
+/****************** Variables externas para el generador de codigo intermedio*/
+extern int si;			  /* Desplazamiento relativo en el Segmento de Código*/
+
+typedef struct expr
+{
+	int tipo;
+	int pos;
+}EXPR;
 
 #endif  /* _HEADER_H */
 /*****************************************************************************/
