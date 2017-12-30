@@ -1,4 +1,4 @@
-function [ error ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,numGaus)
+function [ error,variance ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,numGaus)
 %clasificationError
 %   This function obtains the classification error of a data
 %   set using bayesian networks and gaussian mixtures.
@@ -26,7 +26,7 @@ function [ error ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,
     datosApr(numNodos,:) = num2cell(dataApr',1);
     datosApr(1,:) = num2cell(etiqApr',1);
     motor = jtree_inf_engine(redB);
-    maxIter = 16;
+    maxIter = 15;
     [~,~,motor2] = learn_params_em(motor,datosApr,maxIter);
 
     % Load and inicialization of the test data
@@ -53,6 +53,6 @@ function [ error ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,
 
     correct = sum(I==etiqTest);
     error = (numTestElem-correct)/numTestElem;
-
+    variance = 1.96*sqrt((error*(1-error))/numTestElem);
 end
 

@@ -1,4 +1,4 @@
-% Creacion e inicialización de la red bayesiana
+en% Creacion e inicialización de la red bayesiana
 N = 5;
 P = 1; F = 2; C = 3; X = 4; D = 5;
 grafo = zeros(N,N);
