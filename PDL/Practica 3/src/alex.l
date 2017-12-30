@@ -1,7 +1,8 @@
 %{
 #include <stdio.h>
-#include <asin.h>
 #include "header.h"
+#include <asin.h>
+
 
 extern FILE *yyin;
 extern int verbosidad;

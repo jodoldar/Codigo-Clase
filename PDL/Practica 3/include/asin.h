@@ -140,11 +140,11 @@
 
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
-#line 13 "./src/asin.y"
+#line 14 "./src/asin.y"
 {
 	char* ident;
 	int cent;
-	int tipo;
+	EXPR expr;
 }
 /* Line 1529 of yacc.c.  */
 #line 151 "asin.h"

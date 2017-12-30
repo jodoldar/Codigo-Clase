@@ -31,9 +31,12 @@ int main (int argc, char **argv)
       fprintf (stderr, "Fichero no valido %s\n", argv[argc]);      
     else {        
       if (verbosidad == TRUE) fprintf(stdout,"%3d.- ", yylineno);
-      nom_fich = argv[argc];
+      nom_fich = "outTest";//argv[argc];
       yyparse ();
-      if (numErrores == 0) volcarCodigo(nom_fich);
+      if (numErrores == 0){
+        fprintf(stdout, "Fichero correcto. Guardo en: %s\n", nom_fich);
+        volcarCodigo(nom_fich);
+      } 
       else fprintf(stdout,"\nNumero de errores:      %d\n", numErrores);
     }   
   }
