@@ -1,4 +1,4 @@
-function [ error ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,numGaus)
+function [ error,variant ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,numGaus)
 %clasificationError
 %   This function obtains the classification error of a data
 %   set using bayesian networks and gaussian mixtures.
@@ -53,6 +53,6 @@ function [ error ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,
 
     correct = sum(I==etiqTest);
     error = (numTestElem-correct)/numTestElem;
-
+    variant = 1.96*sqrt((error*(1-error))/numTestElem);
 end
 

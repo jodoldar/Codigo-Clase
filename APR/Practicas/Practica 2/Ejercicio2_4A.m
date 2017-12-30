@@ -14,7 +14,7 @@ redB.CPD{S} = tabular_CPD(redB,S,[0.5 0.9 0.5 0.1]);
 redB.CPD{R} = tabular_CPD(redB,R,[0.8 0.2 0.2 0.8]);
 
 % Obtencion de las muestras de ejemplo
-nsamples = 1000;
+nsamples = 10000;
 samples = cell(N, nsamples);
 for i=1:nsamples
     samples(:,i)=sample_bnet(redB);
