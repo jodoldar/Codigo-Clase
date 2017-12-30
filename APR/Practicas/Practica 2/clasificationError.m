@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 function [ error,variant ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,numGaus)
+=======
+function [ error,variance ] = clasificationError(trPath,trLabelsPath,tsPath,tsLabelsPath,numGaus)
+>>>>>>> 7537cc0684f386caf9ff72f18366315c093a0de2
 %clasificationError
 %   This function obtains the classification error of a data
 %   set using bayesian networks and gaussian mixtures.
@@ -53,6 +57,10 @@ function [ error,variant ] = clasificationError(trPath,trLabelsPath,tsPath,tsLab
 
     correct = sum(I==etiqTest);
     error = (numTestElem-correct)/numTestElem;
+<<<<<<< HEAD
     variant = 1.96*sqrt((error*(1-error))/numTestElem);
+=======
+    variance = 1.96*sqrt((error*(1-error))/numTestElem);
+>>>>>>> 7537cc0684f386caf9ff72f18366315c093a0de2
 end
 
