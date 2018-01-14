@@ -1,7 +1,135 @@
-  0 ESUM      p: 32657  ,  p: 32657  ,  p:   1  
-  1 RESTO     p: 32657  ,  p: 32657  ,  p:   2  
-  2 EMULT     p:   1  ,  p:   2  ,  p:   3  
-  3 EDIVI     p:   3  ,  p: 32657  ,  p:   4  
-  4 EDIF      p:   4  ,  p: 32657  ,  p:   5  
-  5 EMULT     p:   0  ,  p:   5  ,  p: 32657  
-  6 FIN               ,          ,          
+  0 EREAD             ,          ,  p: 150  
+  1 EASIG     i:   0  ,          ,  p: 154  
+  2 EASIG     p: 154  ,          ,  p: 153  
+  3 EASIG     p: 153  ,          ,  p: 155  
+  4 EASIG     p: 153  ,          ,  p: 156  
+  5 EASIG     i:   0  ,          ,  p: 157  
+  6 EDIST     p: 156  ,  i:   0  ,  e:   8  
+  7 EASIG     i:   1  ,          ,  p: 157  
+  8 EIGUAL    p: 157  ,  i:   0  ,  e:  30  
+  9 EASIG     p: 150  ,          ,  p: 158  
+ 10 EASIG     i:   1  ,          ,  p: 159  
+ 11 EASIG     i:   1  ,          ,  p: 160  
+ 12 EMAY      p: 158  ,  p: 159  ,  e:  14  
+ 13 EASIG     i:   0  ,          ,  p: 160  
+ 14 EASIG     p: 150  ,          ,  p: 161  
+ 15 EASIG     i: 150  ,          ,  p: 162  
+ 16 EASIG     i:   1  ,          ,  p: 163  
+ 17 EMEN      p: 161  ,  p: 162  ,  e:  19  
+ 18 EASIG     i:   0  ,          ,  p: 163  
+ 19 EMULT     p: 160  ,  p: 163  ,  p: 165  
+ 20 EASIG     i:   1  ,          ,  p: 164  
+ 21 EMAYEQ    p: 165  ,  i:   1  ,  e:  23  
+ 22 EASIG     i:   0  ,          ,  p: 164  
+ 23 EIGUAL    p: 164  ,  i:   0  ,  e:  28  
+ 24 EASIG     i:   1  ,          ,  p: 166  
+ 25 EASIG     p: 166  ,          ,  p: 153  
+ 26 EASIG     p: 153  ,          ,  p: 167  
+ 27 GOTOS             ,          ,  e:  29  
+ 28 EREAD             ,          ,  p: 150  
+ 29 GOTOS             ,          ,  e:   4  
+ 30 EASIG     i:   2  ,          ,  p: 168  
+ 31 EASIG     p: 168  ,          ,  p: 152  
+ 32 EASIG     p: 152  ,          ,  p: 169  
+ 33 EASIG     p: 152  ,          ,  p: 170  
+ 34 EASIG     p: 150  ,          ,  p: 171  
+ 35 EASIG     i:   1  ,          ,  p: 172  
+ 36 EMENEQ    p: 170  ,  p: 171  ,  e:  38  
+ 37 EASIG     i:   0  ,          ,  p: 172  
+ 38 EIGUAL    p: 172  ,  i:   0  ,  e:  46  
+ 39 EASIG     p: 152  ,          ,  p: 173  
+ 40 EASIG     i:   1  ,          ,  p: 174  
+ 41 EVA       p:   0  ,  p: 173  ,  p: 174  
+ 42 EAV       p:   0  ,  p: 173  ,  p: 175  
+ 43 EASIG     p: 152  ,          ,  p: 176  
+ 44 ESUM      p: 152  ,  i:   1  ,  p: 152  
+ 45 GOTOS             ,          ,  e:  33  
+ 46 EASIG     i:   2  ,          ,  p: 177  
+ 47 EASIG     p: 177  ,          ,  p: 151  
+ 48 EASIG     p: 151  ,          ,  p: 178  
+ 49 EASIG     i:   0  ,          ,  p: 179  
+ 50 EASIG     p: 179  ,          ,  p: 153  
+ 51 EASIG     p: 153  ,          ,  p: 180  
+ 52 EASIG     p: 153  ,          ,  p: 181  
+ 53 EASIG     i:   0  ,          ,  p: 182  
+ 54 EDIST     p: 181  ,  i:   0  ,  e:  56  
+ 55 EASIG     i:   1  ,          ,  p: 182  
+ 56 EIGUAL    p: 182  ,  i:   0  ,  e: 116  
+ 57 EASIG     i:   2  ,          ,  p: 183  
+ 58 EASIG     p: 183  ,          ,  p: 152  
+ 59 EASIG     p: 152  ,          ,  p: 184  
+ 60 EASIG     p: 152  ,          ,  p: 185  
+ 61 EASIG     p: 151  ,          ,  p: 186  
+ 62 EMULT     p: 185  ,  p: 186  ,  p: 187  
+ 63 EASIG     p: 150  ,          ,  p: 188  
+ 64 EASIG     i:   1  ,          ,  p: 189  
+ 65 EMENEQ    p: 187  ,  p: 188  ,  e:  67  
+ 66 EASIG     i:   0  ,          ,  p: 189  
+ 67 EIGUAL    p: 189  ,  i:   0  ,  e:  77  
+ 68 EASIG     p: 152  ,          ,  p: 190  
+ 69 EASIG     p: 151  ,          ,  p: 191  
+ 70 EMULT     p: 190  ,  p: 191  ,  p: 192  
+ 71 EASIG     i:   0  ,          ,  p: 193  
+ 72 EVA       p:   0  ,  p: 192  ,  p: 193  
+ 73 EAV       p:   0  ,  p: 192  ,  p: 194  
+ 74 EASIG     p: 152  ,          ,  p: 195  
+ 75 ESUM      p: 152  ,  i:   1  ,  p: 152  
+ 76 GOTOS             ,          ,  e:  60  
+ 77 EASIG     p: 151  ,          ,  p: 196  
+ 78 EASIG     i:   1  ,          ,  p: 197  
+ 79 ESUM      p: 196  ,  p: 197  ,  p: 198  
+ 80 EASIG     p: 198  ,          ,  p: 152  
+ 81 EASIG     p: 152  ,          ,  p: 199  
+ 82 EASIG     p: 152  ,          ,  p: 200  
+ 83 EAV       p:   0  ,  p: 200  ,  p: 201  
+ 84 EASIG     i:   0  ,          ,  p: 202  
+ 85 EDIST     p: 201  ,  i:   0  ,  e:  87  
+ 86 EASIG     i:   1  ,          ,  p: 202  
+ 87 EASIG     p: 152  ,          ,  p: 203  
+ 88 EASIG     p: 150  ,          ,  p: 204  
+ 89 EASIG     i:   1  ,          ,  p: 205  
+ 90 EMENEQ    p: 203  ,  p: 204  ,  e:  92  
+ 91 EASIG     i:   0  ,          ,  p: 205  
+ 92 EMULT     p: 202  ,  p: 205  ,  p: 207  
+ 93 EASIG     i:   1  ,          ,  p: 206  
+ 94 EMAYEQ    p: 207  ,  i:   1  ,  e:  96  
+ 95 EASIG     i:   0  ,          ,  p: 206  
+ 96 EIGUAL    p: 206  ,  i:   0  ,  e: 100  
+ 97 EASIG     p: 152  ,          ,  p: 208  
+ 98 ESUM      p: 152  ,  i:   1  ,  p: 152  
+ 99 GOTOS             ,          ,  e:  82  
+100 EASIG     p: 152  ,          ,  p: 209  
+101 EASIG     p: 152  ,          ,  p: 210  
+102 EMULT     p: 209  ,  p: 210  ,  p: 211  
+103 EASIG     p: 150  ,          ,  p: 212  
+104 EASIG     i:   1  ,          ,  p: 213  
+105 EMEN      p: 211  ,  p: 212  ,  e: 107  
+106 EASIG     i:   0  ,          ,  p: 213  
+107 EIGUAL    p: 213  ,  i:   0  ,  e: 112  
+108 EASIG     p: 152  ,          ,  p: 214  
+109 EASIG     p: 214  ,          ,  p: 151  
+110 EASIG     p: 151  ,          ,  p: 215  
+111 GOTOS             ,          ,  e: 115  
+112 EASIG     i:   1  ,          ,  p: 216  
+113 EASIG     p: 216  ,          ,  p: 153  
+114 EASIG     p: 153  ,          ,  p: 217  
+115 GOTOS             ,          ,  e:  52  
+116 EASIG     i:   2  ,          ,  p: 218  
+117 EASIG     p: 218  ,          ,  p: 152  
+118 EASIG     p: 152  ,          ,  p: 219  
+119 EASIG     p: 152  ,          ,  p: 220  
+120 EASIG     p: 150  ,          ,  p: 221  
+121 EASIG     i:   1  ,          ,  p: 222  
+122 EMENEQ    p: 220  ,  p: 221  ,  e: 124  
+123 EASIG     i:   0  ,          ,  p: 222  
+124 EIGUAL    p: 222  ,  i:   0  ,  e: 134  
+125 EASIG     p: 152  ,          ,  p: 223  
+126 EAV       p:   0  ,  p: 223  ,  p: 224  
+127 EIGUAL    p: 224  ,  i:   0  ,  e: 131  
+128 EASIG     p: 152  ,          ,  p: 225  
+129 EWRITE            ,          ,  p: 225  
+130 GOTOS             ,          ,  e: 131  
+131 EASIG     p: 152  ,          ,  p: 226  
+132 ESUM      p: 152  ,  i:   1  ,  p: 152  
+133 GOTOS             ,          ,  e: 119  
+134 FIN               ,          ,          
