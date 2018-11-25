@@ -18,3 +18,5 @@ Actualmente, la lista de asignaturas que se encuentran en el repositorio son:
  * SIN
  * TAL
  * TSR
+
+Usalo sabiamente, un gran poder conlleva una gran responsabilidad
